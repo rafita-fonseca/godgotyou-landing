@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-page: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --text-main: #1A1A1A;
+  --text-muted: #4A5568;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  position: relative;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Grano analógico del Santuario */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/assets/grain-overlay.png');
+  background-repeat: repeat;
+  background-size: 260px 460px;
+  opacity: 0.085;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.font-serif-bible {
+  font-family: 'Lora', Georgia, Cambria, serif;
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Scrollbar serena */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5E7153;
+}
