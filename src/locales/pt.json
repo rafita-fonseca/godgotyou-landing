@@ -1,20 +1,35 @@
 {
   "nav": {
-    "about": "Sobre",
-    "features": "Recursos",
-    "contact": "Contato",
-    "cta": "Começar"
+    "badge": "Santuário de Verdade Bíblica",
+    "cta": "Abrir App"
   },
   "hero": {
-    "badge": "Fé e Propósito",
-    "title": "Deus cuida de cada passo seu",
-    "subtitle": "Encontre paz, direção e comunidade para fortalecer sua caminhada diária.",
-    "cta_primary": "Faça parte da comunidade",
-    "cta_secondary": "Saiba mais"
+    "badge": "2 Coríntios 10:5 · Levando Cautivo Todo Pensamento",
+    "title": "Paz bíblica viva para a sua mente em meio à incerteza",
+    "subtitle": "Não é um devocional estático nem uma leitura rígida. É uma âncora contemplativa onde você desabafa o que pesa no seu coração e recebe promessas bíblicas precisas para restaurar a sua paz.",
+    "cta_primary": "Entrar no Santuário",
+    "cta_secondary": "Conheça como funciona",
+    "privacy": "Privacidade absoluta: Nada é salvo na nuvem",
+    "pwa": "Gratuito na web e no celular (PWA)"
+  },
+  "pillars": {
+    "badge": "Um Instrumento Integral",
+    "title": "Três maneiras de encontrar socorro na Palavra",
+    "subtitle": "Projetado tanto para a intimidade pessoal quanto para interceder por quem você ama e restaurar a paz no lar.",
+    "tab_soul": "1. Para sua Alma",
+    "tab_intercession": "2. Intercessão",
+    "tab_covenant": "3. Pacto de Paz"
+  },
+  "features": {
+    "title": "Concebido com rigor doutrinário e reverência estética",
+    "subtitle": "Cada detalhe protege o seu olhar, a sua mente e a sua privacidade."
+  },
+  "cta_section": {
+    "title": "Descanse o seu coração na verdade que jamais muda",
+    "subtitle": "Disponível imediatamente no seu navegador, iPhone ou Android sem downloads obrigatórios em lojas.",
+    "btn": "Abrir God Got You Agora"
   },
   "footer": {
-    "rights": "Todos os direitos reservados.",
-    "privacy": "Privacidade",
-    "terms": "Termos de Serviço"
+    "verse": "«Lâmpada para os meus pés é a tua palavra e luz para o meu caminho.» — Salmos 119:105"
   }
 }

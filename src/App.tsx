@@ -20,9 +20,9 @@ import { LanguageSwitcher } from './components/LanguageSwitcher';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'alma' | 'intercesion' | 'pacto'>('alma');
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
-  const APP_URL = "https://godgotyou.app";
+  const targetAppUrl = `https://godgotyou.app?lang=${locale}`;
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] selection:bg-[#D4B373]/30 selection:text-[#2D4523] flex flex-col justify-between">
@@ -50,7 +50,7 @@ export default function App() {
             <LanguageSwitcher />
 
             <a 
-              href={APP_URL}
+              href={targetAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-2xl bg-[#2D4523] hover:bg-[#23371B] text-white text-xs sm:text-sm font-serif-display font-bold tracking-wider uppercase transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-98 cursor-pointer"
@@ -82,7 +82,7 @@ export default function App() {
           {/* Botones de Acción */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
             <a 
-              href={APP_URL}
+              href={targetAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-[#2D4523] hover:bg-[#1F3018] text-white text-sm sm:text-base font-serif-display font-bold tracking-wider uppercase shadow-xl hover:shadow-2xl transition-all cursor-pointer hover:scale-[1.01]"
@@ -104,12 +104,12 @@ export default function App() {
           <div className="pt-6 flex items-center justify-center gap-6 text-xs text-[#64748B] flex-wrap">
             <div className="flex items-center gap-2">
               <Lock className="w-3.5 h-3.5 text-[#5E7153]" />
-              <span>Privacidad absoluta: Nada se guarda en la nube</span>
+              <span>{t.hero?.privacy || "Privacidad absoluta: Nada se guarda en la nube"}</span>
             </div>
             <span>·</span>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#5E7153]" />
-              <span>Gratuito en web y móvil (PWA)</span>
+              <span>{t.hero?.pwa || "Gratuito en web y móvil (PWA)"}</span>
             </div>
           </div>
         </div>
@@ -151,13 +151,13 @@ export default function App() {
           
           <div className="text-center space-y-3 max-w-2xl mx-auto">
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#5E7153] font-serif-display">
-              Un Instrumento Integral
+              {t.pillars?.badge || "Un Instrumento Integral"}
             </span>
             <h2 className="text-2xl sm:text-4xl font-serif-display font-bold text-[#1A1A1A]">
-              Tres formas de encontrar auxilio en la Palabra
+              {t.pillars?.title || "Tres formas de encontrar auxilio en la Palabra"}
             </h2>
             <p className="text-sm text-[#64748B] font-serif-bible italic">
-              Diseñado tanto para la intimidad personal como para interceder por quienes amas y sanar divisiones en el hogar.
+              {t.pillars?.subtitle || "Diseñado tanto para la intimidad personal como para interceder por quienes amas y sanar divisiones en el hogar."}
             </p>
           </div>
 
@@ -173,7 +173,7 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                1. Para tu Alma
+                {t.pillars?.tab_soul || "1. Para tu Alma"}
               </button>
 
               <button
@@ -185,7 +185,7 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                2. Intercesión
+                {t.pillars?.tab_intercession || "2. Intercesión"}
               </button>
 
               <button
@@ -197,7 +197,7 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                <span>3. Pacto de Paz</span>
+                <span>{t.pillars?.tab_covenant || "3. Pacto de Paz"}</span>
                 <span className="text-[9px] px-1.5 py-0.2 rounded-full font-bold bg-[#D4B373]/30 text-[#8C6D28]">
                   PRO
                 </span>
@@ -338,10 +338,10 @@ export default function App() {
         <div className="max-w-5xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-serif-display font-bold text-[#1A1A1A]">
-              Diseñado con rigor doctrinal y sensibilidad estética
+              {t.features?.title || "Diseñado con rigor doctrinal y sensibilidad estética"}
             </h2>
             <p className="text-sm text-[#64748B] font-serif-bible italic">
-              Cada rincón de la aplicación cuida tu mirada, tu mente y tu privacidad.
+              {t.features?.subtitle || "Cada rincón de la aplicación cuida tu mirada, tu mente y tu privacidad."}
             </p>
           </div>
 
@@ -391,21 +391,21 @@ export default function App() {
           <img src="/logo.png" alt="GodGotYou" className="w-14 h-14 object-contain mx-auto brightness-110 drop-shadow-md" />
           
           <h2 className="text-3xl sm:text-4xl font-serif-display font-bold text-[#F8F9FA] max-w-xl mx-auto leading-tight">
-            Descansa tu corazón en la verdad que no cambia
+            {t.cta_section?.title || "Descansa tu corazón en la verdad que no cambia"}
           </h2>
 
           <p className="text-sm sm:text-base text-[#DCE6D9] font-serif-bible italic max-w-lg mx-auto">
-            Disponible de forma inmediata en tu navegador web, iPhone o Android sin descargas obligatorias de tiendas.
+            {t.cta_section?.subtitle || "Disponible de forma inmediata en tu navegador web, iPhone o Android sin descargas obligatorias de tiendas."}
           </p>
 
           <div className="pt-2">
             <a 
-              href={APP_URL}
+              href={targetAppUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-[#D4B373] hover:bg-[#C5A361] text-[#0E1113] text-sm font-serif-display font-bold tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all cursor-pointer hover:scale-[1.02] active:scale-98"
             >
-              <span>{t.hero?.cta_primary ? `Abrir God Got You` : "Abrir God Got You Ahora"}</span>
+              <span>{t.cta_section?.btn || "Abrir God Got You Ahora"}</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>
@@ -422,7 +422,7 @@ export default function App() {
               <span className="text-[11px] text-[#64748B]">· godgotyou.app</span>
             </div>
             <p className="text-xs text-[#718096] font-serif-bible italic">
-              «Lámpara es a mis pies tu palabra, y lumbrera a mi camino.» — Salmos 119:105
+              {t.footer?.verse || "«Lámpara es a mis pies tu palabra, y lumbrera a mi camino.» — Salmos 119:105"}
             </p>
           </div>
 

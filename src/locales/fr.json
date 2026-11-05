@@ -1,20 +1,35 @@
 {
   "nav": {
-    "about": "À propos",
-    "features": "Fonctionnalités",
-    "contact": "Contact",
-    "cta": "Commencer"
+    "badge": "Sanctuaire de Vérité Biblique",
+    "cta": "Ouvrir l'App"
   },
   "hero": {
-    "badge": "Foi et Dessein",
-    "title": "Dieu veille sur chacun de vos pas",
-    "subtitle": "Trouvez la paix, des conseils et une communauté pour fortifier votre marche quotidienne.",
-    "cta_primary": "Rejoindre la communauté",
-    "cta_secondary": "En savoir plus"
+    "badge": "2 Corinthiens 10:5 · Amenant Toute Pensée Captive",
+    "title": "Une paix biblique vivante pour votre esprit au cœur de l'incertitude",
+    "subtitle": "Ni un livret figé, ni une liste de lecture rigide. Une ancre contemplative où déposer ce qui pèse sur votre cœur et recevoir les promesses précises de l'Écriture pour restaurer votre paix.",
+    "cta_primary": "Entrer dans le Sanctuaire",
+    "cta_secondary": "Découvrir le fonctionnement",
+    "privacy": "Confidentialité absolue : Rien n'est stocké dans le cloud",
+    "pwa": "Gratuit sur le web et mobile (PWA)"
+  },
+  "pillars": {
+    "badge": "Un Instrument Intégral",
+    "title": "Trois façons de trouver refuge dans la Parole",
+    "subtitle": "Conçu pour l'intimité personnelle, l'intercession pour vos proches et la réconciliation dans les foyers.",
+    "tab_soul": "1. Pour Votre Âme",
+    "tab_intercession": "2. Intercession",
+    "tab_covenant": "3. Pacte de Paix"
+  },
+  "features": {
+    "title": "Conçu avec rigueur doctrinale et délicatesse esthétique",
+    "subtitle": "Chaque détail préserve votre regard, votre esprit et votre intimité."
+  },
+  "cta_section": {
+    "title": "Reposez votre cœur dans la vérité immuable",
+    "subtitle": "Accessible instantanément sur votre navigateur, iPhone ou Android sans téléchargement requis.",
+    "btn": "Ouvrir God Got You Maintenant"
   },
   "footer": {
-    "rights": "Tous droits réservés.",
-    "privacy": "Confidentialité",
-    "terms": "Conditions d'utilisation"
+    "verse": "« Ta parole est une lampe à mes pieds, et une lumière sur mon sentier. » — Psaume 119:105"
   }
 }

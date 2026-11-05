@@ -1,20 +1,35 @@
 {
   "nav": {
-    "about": "About",
-    "features": "Features",
-    "contact": "Contact",
-    "cta": "Get Started"
+    "badge": "Sanctuary of Biblical Truth",
+    "cta": "Open App"
   },
   "hero": {
-    "badge": "Faith & Purpose",
-    "title": "God has got your every step",
-    "subtitle": "Find peace, guidance, and community to strengthen your daily walk.",
-    "cta_primary": "Join the Community",
-    "cta_secondary": "Learn More"
+    "badge": "2 Corinthians 10:5 · Take Every Thought Captive",
+    "title": "Living biblical peace for your mind amidst uncertainty",
+    "subtitle": "Not a static devotional nor a rigid reading checklist. It is a contemplative anchor where you pour out what burdens your heart and receive precise Scripture promises to restore your peace.",
+    "cta_primary": "Enter the Sanctuary",
+    "cta_secondary": "See how it works",
+    "privacy": "Absolute privacy: Nothing is stored in the cloud",
+    "pwa": "Free on web and mobile (PWA)"
+  },
+  "pillars": {
+    "badge": "A Comprehensive Instrument",
+    "title": "Three ways to find refuge in the Word",
+    "subtitle": "Designed for personal intimacy, interceding for those you love, and healing divisions at home.",
+    "tab_soul": "1. For Your Soul",
+    "tab_intercession": "2. Intercession",
+    "tab_covenant": "3. Covenant of Peace"
+  },
+  "features": {
+    "title": "Crafted with doctrinal depth and aesthetic reverence",
+    "subtitle": "Every detail protects your focus, your mind, and your privacy."
+  },
+  "cta_section": {
+    "title": "Rest your heart in the truth that never changes",
+    "subtitle": "Instantly accessible on web browsers, iPhone, or Android without mandatory store downloads.",
+    "btn": "Open God Got You Now"
   },
   "footer": {
-    "rights": "All rights reserved.",
-    "privacy": "Privacy",
-    "terms": "Terms of Service"
+    "verse": "“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105"
   }
 }

@@ -1,20 +1,35 @@
 {
   "nav": {
-    "about": "Acerca de",
-    "features": "Características",
-    "contact": "Contacto",
-    "cta": "Empezar"
+    "badge": "Santuario de Verdad Bíblica",
+    "cta": "Abrir App"
   },
   "hero": {
-    "badge": "Fe y Propósito",
-    "title": "Dios cuida cada uno de tus pasos",
-    "subtitle": "Encuentra paz, guía y comunidad para fortalecer tu caminar diario.",
-    "cta_primary": "Únete a la comunidad",
-    "cta_secondary": "Saber más"
+    "badge": "2 Corintios 10:5 · Lleva Cautivo el Pensamiento",
+    "title": "Paz bíblica viva para tu mente en medio de la incertidumbre",
+    "subtitle": "No es un devocional estático ni un catálogo de lectura rígido. Es un ancla contemplativa donde desahogas lo que hoy oprime tu corazón y recibes promesas bíblicas precisas para restaurar tu paz.",
+    "cta_primary": "Entrar al Santuario",
+    "cta_secondary": "Conoce cómo funciona",
+    "privacy": "Privacidad absoluta: Nada se guarda en la nube",
+    "pwa": "Gratuito en web y móvil (PWA)"
+  },
+  "pillars": {
+    "badge": "Un Instrumento Integral",
+    "title": "Tres formas de encontrar auxilio en la Palabra",
+    "subtitle": "Diseñado tanto para la intimidad personal como para interceder por quienes amas y sanar divisiones en el hogar.",
+    "tab_soul": "1. Para tu Alma",
+    "tab_intercession": "2. Intercesión",
+    "tab_covenant": "3. Pacto de Paz"
+  },
+  "features": {
+    "title": "Diseñado con rigor doctrinal y sensibilidad estética",
+    "subtitle": "Cada rincón de la aplicación cuida tu mirada, tu mente y tu privacidad."
+  },
+  "cta_section": {
+    "title": "Descansa tu corazón en la verdad que no cambia",
+    "subtitle": "Disponible de forma inmediata en tu navegador web, iPhone o Android sin descargas obligatorias de tiendas.",
+    "btn": "Abrir God Got You Ahora"
   },
   "footer": {
-    "rights": "Todos los derechos reservados.",
-    "privacy": "Privacidad",
-    "terms": "Términos de servicio"
+    "verse": "«Lámpara es a mis pies tu palabra, y lumbrera a mi camino.» — Salmos 119:105"
   }
 }
