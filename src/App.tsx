@@ -15,9 +15,12 @@ import {
   Mail,
   Award
 } from 'lucide-react';
+import { useTranslation } from './context/LanguageContext';
+import { LanguageSwitcher } from './components/LanguageSwitcher';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'alma' | 'intercesion' | 'pacto'>('alma');
+  const { t } = useTranslation();
 
   const APP_URL = "https://godgotyou.app";
 
@@ -38,19 +41,21 @@ export default function App() {
                 God Got You
               </span>
               <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-widest uppercase text-[#5E7153] mt-0.5">
-                Santuario de Verdad Bíblica
+                {t.nav?.badge || "Santuario de Verdad Bíblica"}
               </span>
             </div>
           </a>
 
           <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+
             <a 
               href={APP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-2xl bg-[#2D4523] hover:bg-[#23371B] text-white text-xs sm:text-sm font-serif-display font-bold tracking-wider uppercase transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-98 cursor-pointer"
             >
-              <span>Abrir App</span>
+              <span>{t.nav?.cta || "Abrir App"}</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#D4B373]" />
             </a>
           </div>
@@ -63,15 +68,15 @@ export default function App() {
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FAF0E6] border border-[#ECD9C6] text-[#8C6D4F] text-xs font-bold font-serif-display uppercase tracking-widest shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-[#8C6D4F]" />
-            <span>2 Corintios 10:5 · Lleva Cautivo el Pensamiento</span>
+            <span>{t.hero?.badge || "2 Corintios 10:5 · Lleva Cautivo el Pensamiento"}</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif-display font-bold text-[#1A1A1A] leading-[1.15] tracking-tight max-w-4xl mx-auto">
-            Paz bíblica viva para tu mente en medio de la incertidumbre
+            {t.hero?.title || "Paz bíblica viva para tu mente en medio de la incertidumbre"}
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-[#4A5568] max-w-2xl mx-auto font-serif-bible italic leading-relaxed">
-            No es un devocional estático ni un catálogo de lectura rígido. Es un ancla contemplativa donde desahogas lo que hoy oprime tu corazón y recibes promesas bíblicas precisas para restaurar tu paz.
+            {t.hero?.subtitle || "No es un devocional estático ni un catálogo de lectura rígido. Es un ancla contemplativa donde desahogas lo que hoy oprime tu corazón y recibes promesas bíblicas precisas para restaurar tu paz."}
           </p>
 
           {/* Botones de Acción */}
@@ -82,7 +87,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-2xl bg-[#2D4523] hover:bg-[#1F3018] text-white text-sm sm:text-base font-serif-display font-bold tracking-wider uppercase shadow-xl hover:shadow-2xl transition-all cursor-pointer hover:scale-[1.01]"
             >
-              <span>Entrar al Santuario</span>
+              <span>{t.hero?.cta_primary || "Entrar al Santuario"}</span>
               <ArrowRight className="w-4 h-4 text-[#D4B373]" />
             </a>
 
@@ -90,7 +95,7 @@ export default function App() {
               href="#pilares"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white hover:bg-[#F5F2EB] border border-[#E2DDD5] text-[#2C3E50] text-sm font-semibold tracking-wide transition-all shadow-xs cursor-pointer"
             >
-              <span>Conoce cómo funciona</span>
+              <span>{t.hero?.cta_secondary || "Conoce cómo funciona"}</span>
               <ChevronRight className="w-4 h-4 text-[#5E7153]" />
             </a>
           </div>
@@ -400,7 +405,7 @@ export default function App() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-8 py-4 rounded-2xl bg-[#D4B373] hover:bg-[#C5A361] text-[#0E1113] text-sm font-serif-display font-bold tracking-widest uppercase shadow-xl hover:shadow-2xl transition-all cursor-pointer hover:scale-[1.02] active:scale-98"
             >
-              <span>Abrir God Got You Ahora</span>
+              <span>{t.hero?.cta_primary ? `Abrir God Got You` : "Abrir God Got You Ahora"}</span>
               <ExternalLink className="w-4 h-4" />
             </a>
           </div>

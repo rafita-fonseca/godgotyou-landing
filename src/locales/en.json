@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "about": "About",
+    "features": "Features",
+    "contact": "Contact",
+    "cta": "Get Started"
+  },
+  "hero": {
+    "badge": "Faith & Purpose",
+    "title": "God has got your every step",
+    "subtitle": "Find peace, guidance, and community to strengthen your daily walk.",
+    "cta_primary": "Join the Community",
+    "cta_secondary": "Learn More"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms of Service"
+  }
+}

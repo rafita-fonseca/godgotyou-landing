@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "features": "Características",
+    "contact": "Contacto",
+    "cta": "Empezar"
+  },
+  "hero": {
+    "badge": "Fe y Propósito",
+    "title": "Dios cuida cada uno de tus pasos",
+    "subtitle": "Encuentra paz, guía y comunidad para fortalecer tu caminar diario.",
+    "cta_primary": "Únete a la comunidad",
+    "cta_secondary": "Saber más"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Privacidad",
+    "terms": "Términos de servicio"
+  }
+}

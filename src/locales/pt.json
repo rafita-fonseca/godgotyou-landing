@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "features": "Recursos",
+    "contact": "Contato",
+    "cta": "Começar"
+  },
+  "hero": {
+    "badge": "Fé e Propósito",
+    "title": "Deus cuida de cada passo seu",
+    "subtitle": "Encontre paz, direção e comunidade para fortalecer sua caminhada diária.",
+    "cta_primary": "Faça parte da comunidade",
+    "cta_secondary": "Saiba mais"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "privacy": "Privacidade",
+    "terms": "Termos de Serviço"
+  }
+}
