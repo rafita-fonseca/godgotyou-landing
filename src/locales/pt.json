@@ -1,35 +1,184 @@
 {
+  "seo": {
+    "title": "God Got You — Paz bíblica para a sua mente",
+    "description": "Um altar íntimo de quietude para desabafar seus fardos, aquietar a ansiedade e receber promessas bíblicas vivas para descansar."
+  },
   "nav": {
-    "badge": "Santuário de Verdade Bíblica",
-    "cta": "Abrir App"
+    "tagline": "Respire. Solte o fardo. Deus cuida de você.",
+    "cta": "Abrir Santuário"
   },
   "hero": {
-    "badge": "2 Coríntios 10:5 · Levando Cautivo Todo Pensamento",
-    "title": "Paz bíblica viva para a sua mente em meio à incerteza",
-    "subtitle": "Não é um devocional estático nem uma leitura rígida. É uma âncora contemplativa onde você desabafa o que pesa no seu coração e recebe promessas bíblicas precisas para restaurar a sua paz.",
-    "cta_primary": "Entrar no Santuário",
-    "cta_secondary": "Conheça como funciona",
-    "privacy": "Privacidade absoluta: Nada é salvo na nuvem",
-    "pwa": "Gratuito na web e no celular (PWA)"
+    "badge": "2 Coríntios 10:5 · Cativando todo pensamento sob a Graça",
+    "title": "Paz viva para sua mente, ancorada na Palavra",
+    "subtitle": "Quando a incerteza ou o cansaço pesarem sobre seus ombros, não guarde esse peso sozinho. Desabafe com liberdade o que inquieta seu coração e receba promessas bíblicas vivas para voltar a descansar.",
+    "primaryCta": "Entregar meu fardo hoje",
+    "secondaryCta": "Conheça este refúgio",
+    "privacyProof": "Privacidade garantida: Tudo permanece no seu próprio aparelho",
+    "availabilityProof": "Disponível na web e no celular instantaneamente"
   },
-  "pillars": {
-    "badge": "Um Instrumento Integral",
-    "title": "Três maneiras de encontrar socorro na Palavra",
-    "subtitle": "Projetado tanto para a intimidade pessoal quanto para interceder por quem você ama e restaurar a paz no lar.",
-    "tab_soul": "1. Para sua Alma",
-    "tab_intercession": "2. Intercessão",
-    "tab_covenant": "3. Pacto de Paz"
+  "mockup": {
+    "title": "A Promessa Viva",
+    "verseRef": "Salmos 91:1-2 · Refúgio Eterno",
+    "badge": "Paz Interior",
+    "verseText": "Aquele que habita no abrigo do Altíssimo descansará seguro à sombra do Onipotente. Direi do Senhor: Ele é o meu refúgio e a minha fortaleza, o meu Deus, em quem confio.",
+    "heartWordTitle": "Palavra ao Coração:",
+    "heartWordDesc": "Quando sentir que as circunstâncias ultrapassam suas forças, lembre-se de que seu socorro não depende de esforço humano. Descanse sabendo que a fidelidade divina o protege como um escudo."
+  },
+  "manifesto": {
+    "badge": "Um Remanso para o seu Espírito",
+    "title": "Seu coração não precisa de mais ruído.",
+    "titleEnd": "Precisa da verdade que aquieta a alma.",
+    "textAfterDropCap": "m meio às correrias diárias, às dúvidas e às pressões que tentam roubar a nossa calma, é fácil perder de vista o essencial. O God Got You nasceu para oferecer um altar de quietude: um espaço íntimo, sem distrações nem julgamentos, onde você pode expressar com sinceridade o que sente e permitir que a Palavra de Deus seja o alívio que renova suas forças a cada dia.",
+    "freeNote": "Sempre livre e gratuito para entregar seu fardo pessoal",
+    "verseScripture": "«Levando cativo todo pensamento à obediência de Cristo»"
+  },
+  "paths": {
+    "badge": "Um Altar de Socorro Oportuno",
+    "title": "Três maneiras de encontrar refúgio em Sua verdade",
+    "subtitle": "Para o seu alívio íntimo, para abençoar quem você ama e para curar em paz as diferenças do lar.",
+    "tab1": "1. Para minha alma",
+    "tab2": "2. Interceder por alguém",
+    "tab3": "3. Espaço compartilhado",
+    "alma": {
+      "title": "quietude que sua alma precisa",
+      "subtitle": "Seu momento de descanso a sós",
+      "desc": "Escreva com total transparência o que hoje inquieta sua mente: a exigência de controle, o temor financeiro ou o cansaço de carregar tudo sozinho.",
+      "f1Title": "Palavra pastoral:",
+      "f1Desc": "Uma mensagem acolhedora que desarma a culpa e lembra que você não foi feito para carregar o mundo nos ombros.",
+      "f2Title": "A Promessa Viva:",
+      "f2Desc": "Trechos bíblicos precisos (Mateus 11:28) para substituir a agitação interna pelo descanso seguro.",
+      "f3Title": "Oração de repouso:",
+      "f3Desc": "Uma prece em primeira pessoa para entregar as pendências e preocupações antes de dormir."
+    },
+    "intercession": {
+      "title": "oloque-se em oração por quem você ama",
+      "subtitle": "Gálatas 6:2 · Amor Fraterno",
+      "desc": "Clame por um irmão, filho ou amigo em dificuldade. A plataforma gera duas formas complementares de abençoar essa vida:",
+      "c1Title": "1. Carta pastoral completa para o chat",
+      "c1Desc": "Envie uma mensagem completa redigida com o nome dele(a), uma promessa bíblica viva (Filipenses 4:19) e uma oração de acolhimento diretamente pelo WhatsApp.",
+      "c2Title": "2. Cartão de Paz para os stories",
+      "c2Desc": "Exporte um cartão vertical 9:16 com arte manual para compartilhar nas redes ou guardar no celular sem expor nenhum detalhe íntimo."
+    },
+    "covenant": {
+      "title": "cordo sagrado de paz e perdão",
+      "subtitle": "Reconciliação serena em um único aparelho",
+      "desc": "Inspirado em Mateus 5:9. Quando a rotina ou o cansaço trazem distanciamento, duas pessoas compartilham a tela, ouvem com respeito e deixam a sabedoria guiar o lar:",
+      "f1Title": "Palavra pastoral mútua:",
+      "f1Desc": "Um conselho equilibrado para cada um, desarmando o orgulho sem tomar partidos.",
+      "f2Title": "Acordo de paz em voz alta:",
+      "f2Desc": "Um compromisso mútuo lido a dois, escolhendo a união acima da vontade de vencer uma discussão.",
+      "f3Title": "Oração de reconciliação:",
+      "f3Desc": "Uma oração compartilhada pedindo perdão e restauração sincera diante de Deus."
+    }
+  },
+  "canvas": {
+    "lightBadge": "Palavra ao Coração",
+    "lightVerse": "A graça liberta da ilusão exaustiva de ter que ser seu próprio sustentador absoluto. Deus não chamou você para carregar o universo nos ombros; suas necessidades descansam no cuidado providencial.",
+    "lightRef": "Inspirado em Mateus 11:28",
+    "goldBadge": "Oração de Cobertura",
+    "goldVerse": "Aquele que alimenta as aves do céu conhece detalhadamente cada uma de suas necessidades. Quando as forças humanas se esgotam, a fidelidade divina permanece inabalável.",
+    "goldRef": "Inspirado em Filipenses 4:19",
+    "oliveBadge": "Acordo Mútuo de Paz",
+    "oliveVerse": "Decidimos hoje depor reações defensivas e orgulho. Reconhecemos que o cansaço não deve nos afastar, mas nos mover a proteger e sustentar um ao outro.",
+    "oliveRef": "Mateus 5:9 · Bem-aventurados os pacificadores"
+  },
+  "gallery": {
+    "badge": "Sementes Visuais de Paz",
+    "title": "Telas criadas para guardar e abençoar",
+    "subtitle": "Vista suas promessas com texturas artesanais feitas à mão no Procreate para levar no celular ou enviar como abraço a quem precisa.",
+    "linenTitle": "Linho Essencial",
+    "linenTag": "Sempre incluído",
+    "parchmentTitle": "Pergaminho Sagrado",
+    "oliveTitle": "Olivo do Horto",
+    "goldTitle": "Ouro e Cinza"
   },
   "features": {
-    "title": "Concebido com rigor doutrinário e reverência estética",
-    "subtitle": "Cada detalhe protege o seu olhar, a sua mente e a sua privacidade."
+    "title": "Cuidado pastoral em cada detalhe",
+    "subtitle": "Desenhado com reverência para acompanhar suas manhãs e suas noites.",
+    "f1Title": "Pedras de Memória (Ebenézer)",
+    "f1Desc": "Consagre e guarde as promessas que sustentaram seus passos, criando um memorial vivo da graça em sua caminhada.",
+    "f2Title": "Modo Vigília Noturno",
+    "f2Desc": "Ao anoitecer, a tela suaviza o brilho e traz reflexões serenas para ajudar a conciliar um sono reparador.",
+    "f3Title": "Privacidade Inegociável",
+    "f3Desc": "Seus desabafos e orações jamais saem do seu celular nem são salvos em servidores remotos. É estritamente confidencial."
   },
-  "cta_section": {
-    "title": "Descanse o seu coração na verdade que jamais muda",
-    "subtitle": "Disponível imediatamente no seu navegador, iPhone ou Android sem downloads obrigatórios em lojas.",
-    "btn": "Abrir God Got You Agora"
+  "faq": {
+    "badge": "Transparência e Fundamento",
+    "title": "Perguntas Sinceras e Respostas Bíblicas",
+    "subtitle": "Conheça o propósito pastoral que rege o God Got You e por que ele apoia e complementa sua igreja local.",
+    "foundationLabel": "Fundamento:",
+    "items": [
+      {
+        "q": "A Inteligência Artificial não é perigosa ou do mal? Não vem para nos destruir?",
+        "verse": "2 Timóteo 1:7 · «Porque Deus não nos deu espírito de covardia, mas de poder, de amor e de moderação.»",
+        "a": "Esse receio é antigo na história: quando Gutenberg criou a imprensa, líderes afirmaram que mecanizar as letras tiraria a santidade das Escrituras; contudo, Deus usou a imprensa para colocar a Bíblia nas mãos de todos. No início do rádio, muitos o rejeitaram, e hoje ele alcança nações fechadas com o Evangelho. A computação é cálculo sem alma. Enquanto mentes corrompidas usam ferramentas para enganar, homens e mulheres de fé podem redimi-las para consolar milhares com a verdade bíblica em segundos."
+      },
+      {
+        "q": "Por que usar telas e algoritmos se a tecnologia tem prejudicado tantos lares?",
+        "verse": "Mateus 15:19 · «Porque do coração procedem os maus pensamentos, mortes, adultérios...»",
+        "a": "Um aparelho de vidro e metal não peca; peca quem o utiliza. A tecnologia apenas amplifica o que já reside no coração humano. Enquanto indústrias de vícios usam algoritmos dia e noite para aprisionar mentes, o God Got You levanta uma alternativa: transforma essa mesma tela em um altar de descanso para lembrar que Deus está no controle."
+      },
+      {
+        "q": "O aplicativo tenta substituir a leitura da Bíblia física?",
+        "verse": "Mateus 4:4 · «Nem só de pão viverá o homem, mas de toda a palavra que sai da boca de Deus.»",
+        "a": "Jamais. A Bíblia física é o alimento essencial diário. O God Got You atua como kit de primeiros socorros no trânsito, na insônia ou diante de uma crise súbita de ansiedade. Numa emergência, o socorro imediato estabiliza você e o conduz de volta à Fonte."
+      },
+      {
+        "q": "Isso não incentiva as pessoas a se afastarem da sua igreja local?",
+        "verse": "Lucas 15:4 · «Qual de vós é o homem que, possuindo cem ovelhas e perdendo uma, não vai em busca da perdida...?»",
+        "a": "Pelo contrário: prepara corações feridos para retornar. Quem está paralisado pela culpa ou esgotamento raramente consegue frequentar uma comunidade aos domingos. Nosso santuário encontra a pessoa no isolamento, recorda a graça e restaura seu ânimo para buscar comunhão saudável."
+      },
+      {
+        "q": "Como um aplicativo pode oferecer consolo espiritual genuíno? Não é algo frio?",
+        "verse": "Romanos 10:17 · «De sorte que a fé é pelo ouvir, e o ouvir pela palavra de Deus.»",
+        "a": "A tecnologia não produz a paz; a paz procede do Espírito por meio da Palavra viva. O aplicativo é apenas o mensageiro entregando o trecho exato no instante em que sua mente se sente sobrecarregada (2 Coríntios 10:5). Se a igreja primitiva usou cartas em papiro, hoje usamos a tela que você segura."
+      },
+      {
+        "q": "Isso não é 'cristianismo à la carte' ou versículos fora de contexto?",
+        "verse": "Efésios 6:17 · «Tomai também o capacete da salvação, e a espada do Espírito, que é a palavra de Deus.»",
+        "a": "Não oferecemos frases motivacionais vazias. Entregamos âncoras bíblicas firmes contra dores reais. No deserto, Jesus citou passagens específicas como espada para vencer o momento crítico. É exatamente isso que fazemos: entregamos uma verdade precisa para sustentar você na aflição."
+      },
+      {
+        "q": "Não sou religioso. Vão tentar impor doutrinas ou me converter à força?",
+        "verse": "Mateus 11:28 · «Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei.»",
+        "a": "Aqui não há julgamentos nem imposições. O God Got You é um refúgio acolhedor e confidencial para aliviar pensamentos pesados e receber promessas antigas de descanso, paz e restauração. Experimente com total liberdade."
+      },
+      {
+        "q": "O YouVersion e o Glorify já existem. Qual é a real diferença?",
+        "verse": "Salmos 46:1 · «Deus é o nosso refúgio e fortaleza, socorro bem presente na angústia.»",
+        "a": "O YouVersion é uma biblioteca monumental de leitura; o Glorify estrutura rotinas devocionais diárias. O God Got You atua no momento exato do aperto: você entra no segundo em que o peso surge para receber auxílio imediato e reencontrar a calma."
+      },
+      {
+        "q": "É seguro desabafar aqui? O que fazem com os meus dados?",
+        "verse": "Provérbios 11:13 · «O mexeriqueiro descobre o segredo, mas o fiel de espírito encobre o negócio.»",
+        "a": "Seu desabafo é sagrado. Não vendemos dados para publicidade, não rastreamos navegação nem exibimos anúncios invasivos. Tudo é processado de forma confidencial e permanece guardado exclusivamente na memória do seu dispositivo."
+      },
+      {
+        "q": "Vão cobrar pela Palavra de Deus? Por que existe um plano pago?",
+        "verse": "Provérbios 14:23 · «Em todo trabalho proveito há...» | 1 Tessalonicenses 2:9",
+        "a": "O acesso à Palavra e ao consolo essencial é e continuará sendo gratuito para todos. Manter servidores velozes, inteligência artificial protegida e código de qualidade gera custos reais. Se indústrias destrutivas cobram para esvaziar mentes, os crentes podem sustentar com dignidade ferramentas que trazem cura e paz."
+      },
+      {
+        "q": "Para ansiedade não é melhor procurar apoio psicológico em vez de um aplicativo?",
+        "verse": "1 Tessalonicenses 5:23 · «E o mesmo Deus de paz vos santifique todo o vosso espírito, e alma, e corpo...»",
+        "a": "Recomendamos e valorizamos plenamente o apoio médico e terapêutico profissional. O ser humano é espírito, mente e corpo. Enquanto a terapia cuida da saúde emocional e comportamental, a Palavra de Deus pacifica e nutre o espírito. São esferas profundamente complementares."
+      },
+      {
+        "q": "Por que o aplicativo não está na App Store ou no Google Play Store?",
+        "verse": "1 Coríntios 9:19 · «Porque, sendo livre para com todos, fiz-me servo de todos para ganhar ainda mais.»",
+        "a": "Optamos por operar como um Aplicativo Web Progressivo (PWA) direto por três convicções: Primeiro, acessibilidade irrestrita—qualquer pessoa no iPhone, Android ou computador acessa o santuário instantaneamente sem gastar memória do aparelho. Segundo, sem sobrecustos—as lojas convencionais retêm comissões de até 30%, encarecendo iniciativas independentes. Terceiro, soberania digital—não depender de filtros corporativos garante que este refúgio confidencial esteja sempre disponível e protegido no seu celular."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Descanse o coração na verdade que não muda",
+    "subtitle": "Disponível imediatamente no seu navegador, iPhone ou Android sem downloads obrigatórios em lojas de aplicativos.",
+    "button": "Entrar no Santuário Agora"
   },
   "footer": {
-    "verse": "«Lâmpada para os meus pés é a tua palavra e luz para o meu caminho.» — Salmos 119:105"
+    "verse": "«Lâmpada para os meus pés é a tua palavra, e luz para o meu caminho.» — Salmos 119:105",
+    "privacy": "Privacidade e Dados",
+    "terms": "Termos de Serviço",
+    "refunds": "Garantia e Reembolsos (14 Dias)"
   }
 }

@@ -1,35 +1,184 @@
 {
+  "seo": {
+    "title": "God Got You — Une paix biblique pour votre esprit",
+    "description": "Un sanctuaire intime pour déposer vos fardeaux, apaiser les tourments intérieurs et recevoir des promesses d'espérance vivantes."
+  },
   "nav": {
-    "badge": "Sanctuaire de Vérité Biblique",
-    "cta": "Ouvrir l'App"
+    "tagline": "Respirez. Déposez votre fardeau. Dieu veille sur vous.",
+    "cta": "Ouvrir le Sanctuaire"
   },
   "hero": {
-    "badge": "2 Corinthiens 10:5 · Amenant Toute Pensée Captive",
-    "title": "Une paix biblique vivante pour votre esprit au cœur de l'incertitude",
-    "subtitle": "Ni un livret figé, ni une liste de lecture rigide. Une ancre contemplative où déposer ce qui pèse sur votre cœur et recevoir les promesses précises de l'Écriture pour restaurer votre paix.",
-    "cta_primary": "Entrer dans le Sanctuaire",
-    "cta_secondary": "Découvrir le fonctionnement",
-    "privacy": "Confidentialité absolue : Rien n'est stocké dans le cloud",
-    "pwa": "Gratuit sur le web et mobile (PWA)"
+    "badge": "2 Corinthiens 10:5 · Captiver toute pensée sous la Grâce",
+    "title": "Une paix vivante pour votre esprit, ancrée dans la Parole",
+    "subtitle": "Lorsque le doute ou la fatigue morale pèsent sur vos épaules, ne gardez pas ce poids seul. Déposez librement ce qui tourmente vos pensées et recevez des réflexions bibliques pour retrouver un véritable repos.",
+    "primaryCta": "Déposer mon fardeau aujourd'hui",
+    "secondaryCta": "Découvrir ce havre",
+    "privacyProof": "Confidentialité totale : Tout demeure exclusivement sur votre appareil",
+    "availabilityProof": "Accessible immédiatement sur le Web et mobile"
   },
-  "pillars": {
-    "badge": "Un Instrument Intégral",
-    "title": "Trois façons de trouver refuge dans la Parole",
-    "subtitle": "Conçu pour l'intimité personnelle, l'intercession pour vos proches et la réconciliation dans les foyers.",
-    "tab_soul": "1. Pour Votre Âme",
-    "tab_intercession": "2. Intercession",
-    "tab_covenant": "3. Pacte de Paix"
+  "mockup": {
+    "title": "La Promesse Vivante",
+    "verseRef": "Psaume 91:1-2 · Refuge Éternel",
+    "badge": "Paix Intérieure",
+    "verseText": "Celui qui demeure sous l'abri du Très-Haut repose en sécurité sous la protection du Tout-Puissant. Il est mon refuge et ma forteresse ; en Lui je place toute ma confiance.",
+    "heartWordTitle": "Parole au Cœur :",
+    "heartWordDesc": "Quand les circonstances vous submergent, souvenez-vous que votre sécurité ne repose pas sur vos propres forces. Reposez-vous en sachant que Sa fidélité vous entoure comme un bouclier."
+  },
+  "manifesto": {
+    "badge": "Un Havre pour votre Esprit",
+    "title": "Votre âme n'a pas besoin de plus de bruit.",
+    "titleEnd": "Elle a besoin de la vérité qui apaise les tourments.",
+    "textAfterDropCap": "haque jour, les exigences continues, les doutes et les sollicitations numériques finissent par altérer notre calme intérieur. God Got You est né pour vous offrir un autel de quiétude : un lieu intime, sans distraction ni jugement, où vous pouvez exprimer en toute franchise vos ressentis profonds et laisser l'espérance biblique renouveler vos forces jour après jour.",
+    "freeNote": "Toujours libre et gratuit pour déposer vos fardeaux personnels",
+    "verseScripture": "«Amenant toute pensée captive à l'obéissance du Christ»"
+  },
+  "paths": {
+    "badge": "Un Sanctuaire de Secours Opportun",
+    "title": "Trois voies pour trouver refuge dans les Écritures",
+    "subtitle": "Pour votre recueillement personnel, pour intercéder envers ceux que vous aimez, et pour pacifier les tensions du foyer.",
+    "tab1": "1. Pour mon âme",
+    "tab2": "2. Intercéder pour un proche",
+    "tab3": "3. Espace partagé",
+    "alma": {
+      "title": "a quiétude dont votre esprit a besoin",
+      "subtitle": "Votre instant de ressourcement en toute intimité",
+      "desc": "Écrivez avec une totale franchise ce qui préoccupe votre pensée : le besoin de tout contrôler, les inquiétudes financières ou l'épuisement de tout porter seul.",
+      "f1Title": "Parole pastorale :",
+      "f1Desc": "Un éclairage bienveillant qui désamorce la culpabilité et vous rappelle que vous n'avez pas été créé pour porter le monde sur vos épaules.",
+      "f2Title": "La Promesse Vivante :",
+      "f2Desc": "Des repères bibliques précis (Matthieu 11:28) pour troquer l'agitation intérieure contre le véritable repos de l'esprit.",
+      "f3Title": "Prière de quiétude :",
+      "f3Desc": "Une prière à la première personne pour remettre vos préoccupations en suspens avant de trouver le sommeil."
+    },
+    "intercession": {
+      "title": "lacez-vous dans la prière pour ceux que vous aimez",
+      "subtitle": "Galates 6:2 · Amour Fraternel Sincère",
+      "desc": "Intercédez en faveur d'un proche, d'un enfant ou d'un ami en difficulté. L'application génère deux approches complémentaires pour le soutenir :",
+      "c1Title": "1. Lettre d'encouragement pastorale complète",
+      "c1Desc": "Envoyez un message complet rédigé avec son prénom, une promesse biblique d'espérance (Philippiens 4:19) et une prière de bienveillance directement par messagerie.",
+      "c2Title": "2. Carte visuelle de Paix pour vos statuts",
+      "c2Desc": "Exportez un visuel vertical 9:16 créé avec soin pour vos réseaux ou votre écran, sans divulguer aucun élément confidentiel."
+    },
+    "covenant": {
+      "title": "ccord sacré de paix et de réconciliation",
+      "subtitle": "Une conciliation sereine autour d'un même écran",
+      "desc": "Inspiré de Matthieu 5:9. Lorsque la routine ou la fatigue créent de la distance, deux personnes partagent l'appareil, s'écoutent avec respect et laissent la sagesse biblique guider leur foyer :",
+      "f1Title": "Paroles équilibrées au cœur :",
+      "f1Desc": "Un conseil respectueux pour chaque personne, désamorçant l'orgueil sans jamais prendre parti.",
+      "f2Title": "Engagement de paix à voix haute :",
+      "f2Desc": "Une résolution commune lue à deux, privilégiant la protection du lien plutôt que le désir d'avoir le dernier mot.",
+      "f3Title": "Prière de concorde :",
+      "f3Desc": "Une supplication conjointe demandant la force du pardon et de la compréhension mutuelle."
+    }
+  },
+  "canvas": {
+    "lightBadge": "Parole au Cœur",
+    "lightVerse": "La grâce libère de l'illusion épuisante de devoir être son propre pourvoyeur absolu. Votre rôle n'est pas de porter l'univers ; votre vie repose sous un regard providentiel bienveillant.",
+    "lightRef": "Inspiré de Matthieu 11:28",
+    "goldBadge": "Prière de Protection",
+    "goldVerse": "Le Créateur qui prend soin des oiseaux du ciel connaît chacun de vos besoins légitimes. Lorsque les forces humaines s'amenuisent, Sa fidélité demeure inaltérable.",
+    "goldRef": "Inspiré de Philippiens 4:19",
+    "oliveBadge": "Engagement Mutuel de Concorde",
+    "oliveVerse": "Nous décidons aujourd'hui de déposer nos réactions défensives et notre orgueil. Nous reconnaissons que la fatigue ne doit pas nous éloigner, mais nous inciter à veiller l'un sur l'autre.",
+    "oliveRef": "Matthieu 5:9 · Heureux les artisans de paix"
+  },
+  "gallery": {
+    "badge": "Semences Visuelles de Paix",
+    "title": "Des toiles créées pour méditer et partager",
+    "subtitle": "Revêtez vos promesses de textures artisanales soignées pour accompagner votre quotidien ou offrir un réconfort spirituel à un proche.",
+    "linenTitle": "Lin Essentiel",
+    "linenTag": "Toujours inclus",
+    "parchmentTitle": "Parchemin Sacré",
+    "oliveTitle": "Olivier du Jardin",
+    "goldTitle": "Or et Cendre"
   },
   "features": {
-    "title": "Conçu avec rigueur doctrinale et délicatesse esthétique",
-    "subtitle": "Chaque détail préserve votre regard, votre esprit et votre intimité."
+    "title": "Une attention bienveillante dans chaque détail",
+    "subtitle": "Conçu avec une grande révérence pour accompagner vos journées comme vos veilles nocturnes.",
+    "f1Title": "Pierres de Mémorial (Eben-ezer)",
+    "f1Desc": "Conservez la trace des promesses qui vous ont soutenu, composant un mémorial vivant de la fidélité reçue tout au long de votre parcours.",
+    "f2Title": "Mode Veille Nocturne",
+    "f2Desc": "À la tombée de la nuit, l'interface adopte des tons feutrés et propose des lectures apaisantes pour favoriser un repos profond et réparateur.",
+    "f3Title": "Confidentialité Absolue",
+    "f3Desc": "Vos prières et réflexions ne quittent jamais votre téléphone et ne sont stockées sur aucun serveur distant. Cela reste un secret bien gardé."
   },
-  "cta_section": {
-    "title": "Reposez votre cœur dans la vérité immuable",
-    "subtitle": "Accessible instantanément sur votre navigateur, iPhone ou Android sans téléchargement requis.",
-    "btn": "Ouvrir God Got You Maintenant"
+  "faq": {
+    "badge": "Clarté et Fondement Doctrinal",
+    "title": "Questions Sincères & Réponses Bibliques",
+    "subtitle": "Découvrez l'intention pastorale qui guide God Got You et comment ce sanctuaire complète harmonieusement votre église locale.",
+    "foundationLabel": "Fondement :",
+    "items": [
+      {
+        "q": "L'Intelligence Artificielle n'est-elle pas dangereuse ou nuisible pour la foi ?",
+        "verse": "2 Timothée 1:7 · Un esprit de force, d'amour et de sagesse réfléchie.",
+        "a": "Chaque rupture technique a suscité des craintes religieuses : à l'époque de Gutenberg, certains accusaient la mécanisation d'enlever le caractère sacré des Écritures ; pourtant, l'imprimerie a permis de placer la Bible entre les mains de tous. Les débuts de la radio furent critiqués, alors qu'elle transmet aujourd'hui l'espérance au-delà des frontières fermées. L'informatique n'est qu'un ensemble de calculs sans âme. Si certains s'en servent pour égarer, les croyants peuvent la racheter pour délivrer instantanément la paix des Écritures à ceux qui souffrent."
+      },
+      {
+        "q": "Pourquoi utiliser des écrans et des calculs alors que la technologie fragilise tant de familles ?",
+        "verse": "Matthieu 15:19 · Les véritables dispositions prennent naissance dans le cœur humain.",
+        "a": "Un objet de verre et de métal ne pèche pas en lui-même ; seule la main qui l'utilise et le regard porté définissent l'acte. Les outils ne font qu'amplifier ce qui habite l'être humain. Alors que de nombreuses plateformes s'ingénient à capter l'attention pour alimenter l'anxiété, God Got You propose une alternative saine : faire de ce même écran un autel d'arrêt, de paix et de réalignement spirituel."
+      },
+      {
+        "q": "Cette démarche cherche-t-elle à remplacer la lecture de la Bible papier ?",
+        "verse": "Matthieu 4:4 · L'être humain se nourrit de chaque parole issue de la sagesse divine.",
+        "a": "Absolument pas. La Bible physique demeure la nourriture indispensable au quotidien. God Got You intervient comme une trousse de secours spirituel face aux embouteillages, aux insomnies tardives ou aux montées d'angoisse brutales. En situation d'urgence, ces repères stabilisent l'esprit et ramènent vers la Source véritable."
+      },
+      {
+        "q": "Cela ne risque-t-il pas d'éloigner les fidèles de leur assemblée locale ?",
+        "verse": "Luc 15:4 · Aller chercher avec sollicitude la brebis isolée.",
+        "a": "Bien au contraire : cela prépare les cœurs au retour. Une personne paralysée par le remords, la dépression ou l'isolement ose difficilement franchir la porte d'un lieu de culte. Notre sanctuaire vient à sa rencontre dans son abattement, lui rappelle la grâce et fortifie sa disposition à retrouver une communion saine et vivante."
+      },
+      {
+        "q": "Comment une solution numérique peut-elle procurer un réconfort sincère ? N'est-ce pas impersonnel ?",
+        "verse": "Romains 10:17 · La foi s'enracine par l'écoute attentive de la Parole.",
+        "a": "La machine ne crée pas la paix ; celle-ci découle de l'Esprit au travers de la Parole vivante. L'application agit uniquement comme le messager remettant le passage opportun au moment précis où vos pensées sont saturées. Si les premiers chrétiens s'écrivaient sur des rouleaux de papyrus, nous transmettons aujourd'hui cette espérance à travers l'écran que vous tenez."
+      },
+      {
+        "q": "N'est-ce pas une forme de foi superficielle ou de versets décontextualisés ?",
+        "verse": "Éphésiens 6:17 · S'emparer de l'épée de l'Esprit, qui est la Parole.",
+        "a": "Nous refusons les formules de motivation creuses. Nous proposons des ancrages bibliques solides face aux épreuves réelles. Dans le désert, le Christ a manié des paroles précises comme une arme spirituelle pour chaque instant critique. God Got You met à votre disposition un socle scripturaire ciblé pour traverser les moments de grande détresse."
+      },
+      {
+        "q": "Je ne me considère pas comme chrétien. Cherche-t-on à m'imposer des dogmes ?",
+        "verse": "Matthieu 11:28 · Une promesse de repos ouverte à ceux qui ploient sous le fardeau.",
+        "a": "Ici, aucun jugement ni endoctrinement ne vous attendent. God Got You constitue un havre discret pour exprimer vos doutes les plus lourds et accueillir des paroles éprouvées de paix, de répit et d'espérance millénaire. Découvrez ce lieu en toute liberté."
+      },
+      {
+        "q": "YouVersion et Glorify sont déjà reconnus. En quoi God Got You se distingue-t-il ?",
+        "verse": "Psaume 46:1 · Un appui constamment accessible dans les heures de trouble.",
+        "a": "YouVersion propose une bibliothèque textuelle monumentale ; Glorify structure une habitude dévotionnelle régulière. God Got You répond pour sa part à la tourmente immédiate : vous ouvrez l'espace à la seconde précise où l'angoisse surgit pour recevoir un ancrage et retrouver votre souffle."
+      },
+      {
+        "q": "Est-il totalement sûr de se confier ici ? Quel est le traitement des données ?",
+        "verse": "Proverbes 11:13 · L'esprit digne de confiance garde le secret avec fidélité.",
+        "a": "Vos confidences et vos prières sont sacrées. Nous ne revendons aucune donnée de navigation, n'exploitons aucun profil publicitaire et n'intégrons aucune bannière intrusive. Toutes vos données demeurent strictement sauvegardées dans la mémoire locale de votre appareil."
+      },
+      {
+        "q": "La Parole de Dieu doit-elle être payante ? Pourquoi proposer une option rémunérée ?",
+        "verse": "Proverbes 14:23 · Tout labeur appliqué porte son fruit légitime.",
+        "a": "L'accès à l'essence de la Parole et au réconfort premier restera toujours entièrement gratuit pour chacun. Maintenir une infrastructure performante, une intelligence artificielle sécurisée et un développement soigné entraîne des coûts réels. Si les industries de divertissement facturent pour disperser l'esprit, les croyants peuvent soutenir dignement un instrument de paix et de reconstruction."
+      },
+      {
+        "q": "En cas d'angoisse prononcée, un suivi médical n'est-il pas préférable à une application ?",
+        "verse": "1 Thessaloniciens 5:23 · Veiller sur l'harmonie de l'esprit, de l'âme et du corps tout entier.",
+        "a": "Nous encourageons sans réserve l'accompagnement dispensé par les médecins et les psychologues qualifiés. L'être humain est une unité spirituelle, psychique et corporelle. Si la thérapie prend soin de l'équilibre cognitif et émotionnel, la Parole vivante régénère l'esprit et apporte le repos à l'âme. Ces deux démarches se complètent parfaitement."
+      },
+      {
+        "q": "Pourquoi n'êtes-vous pas présents sur l'App Store ou Google Play Store ?",
+        "verse": "1 Corinthiens 9:19 · Se mettre à la portée de tous afin d'en secourir le plus grand nombre.",
+        "a": "Nous avons choisi d'opérer comme une Application Web Progressive (PWA) directe pour trois raisons indispensables : Premièrement, l'accessibilité universelle—toute personne sur iPhone, Android ou ordinateur peut entrer immédiatement dans le sanctuaire sans alourdir le stockage de son téléphone. Deuxièmement, l'absence de commissions indues—les magasins d'applications retiennent jusqu'à 30 % de frais, renchérissant inutilement l'entretien de structures indépendantes. Troisièmement, la souveraineté numérique—ne dépendre d'aucune régulation arbitraire garantit que ce havre confidentiel demeure toujours disponible, pérenne et sous votre contrôle direct."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Reposez votre cœur sur la vérité inaltérable",
+    "subtitle": "Accessible instantanément sur votre navigateur, iPhone ou Android sans obligation de téléchargement sur les stores.",
+    "button": "Entrer dans le Sanctuaire Maintenant"
   },
   "footer": {
-    "verse": "« Ta parole est une lampe à mes pieds, et une lumière sur mon sentier. » — Psaume 119:105"
+    "verse": "«Ta parole est une lampe à mes pieds, et une lumière sur mon sentier.» — Psaume 119:105",
+    "privacy": "Confidentialité & Données",
+    "terms": "Conditions Générales d'Utilisation",
+    "refunds": "Garantie & Remboursements (14 Jours)"
   }
 }

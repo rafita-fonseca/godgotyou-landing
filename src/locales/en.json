@@ -1,35 +1,184 @@
 {
+  "seo": {
+    "title": "God Got You — Biblical peace for your mind",
+    "description": "A contemplative digital haven to release your burdens, quiet your racing thoughts, and receive living biblical peace amidst uncertainty."
+  },
   "nav": {
-    "badge": "Sanctuary of Biblical Truth",
-    "cta": "Open App"
+    "tagline": "Breathe. Let go of the burden. God cares for you.",
+    "cta": "Open Sanctuary"
   },
   "hero": {
-    "badge": "2 Corinthians 10:5 · Take Every Thought Captive",
-    "title": "Living biblical peace for your mind amidst uncertainty",
-    "subtitle": "Not a static devotional nor a rigid reading checklist. It is a contemplative anchor where you pour out what burdens your heart and receive precise Scripture promises to restore your peace.",
-    "cta_primary": "Enter the Sanctuary",
-    "cta_secondary": "See how it works",
-    "privacy": "Absolute privacy: Nothing is stored in the cloud",
-    "pwa": "Free on web and mobile (PWA)"
+    "badge": "2 Corinthians 10:5 · Captive Thoughts Under Grace",
+    "title": "Unshakable peace for your mind, anchored in Truth",
+    "subtitle": "When uncertainty or emotional fatigue weighs upon your spirit, do not carry it alone. Safely release what burdens your thoughts and receive biblical reflections to recover deep rest.",
+    "primaryCta": "Release My Burden Today",
+    "secondaryCta": "Discover This Haven",
+    "privacyProof": "Guaranteed Privacy: Everything stays on your local device",
+    "availabilityProof": "Instantly accessible on web and mobile"
   },
-  "pillars": {
-    "badge": "A Comprehensive Instrument",
-    "title": "Three ways to find refuge in the Word",
-    "subtitle": "Designed for personal intimacy, interceding for those you love, and healing divisions at home.",
-    "tab_soul": "1. For Your Soul",
-    "tab_intercession": "2. Intercession",
-    "tab_covenant": "3. Covenant of Peace"
+  "mockup": {
+    "title": "The Living Promise",
+    "verseRef": "Psalm 91:1-2 · Eternal Refuge",
+    "badge": "Inner Peace",
+    "verseText": "He who dwells in the secret shelter of the Most High shall abide securely in the almighty presence. He is my fortress and my refuge; in Him will I place all my trust.",
+    "heartWordTitle": "A Word for the Heart:",
+    "heartWordDesc": "When circumstance threatens to overwhelm you, remember that your shelter does not rest on human strength. Rest knowing His faithfulness surrounds you as a shield."
+  },
+  "manifesto": {
+    "badge": "A Sanctuary for Your Spirit",
+    "title": "Your soul does not need more noise.",
+    "titleEnd": "It needs the truth that quiets anxiety.",
+    "textAfterDropCap": "very day we face endless demands, doubts, and digital noise that rob us of inner quiet. God Got You was created as a peaceful altar: an intimate, confidential setting where you can express your honest feelings without judgment, allowing the comfort of Scripture to renew your perspective daily.",
+    "freeNote": "Always free to pour out your personal burdens",
+    "verseScripture": "«Bringing every wandering thought into the obedience of Christ»"
+  },
+  "paths": {
+    "badge": "An Altar of Timely Refuge",
+    "title": "Three pathways to find calm in Scripture",
+    "subtitle": "For personal unburdening, praying over those you care about, and healing tension within your family.",
+    "tab1": "1. For My Soul",
+    "tab2": "2. Interceding for Others",
+    "tab3": "3. Shared Space",
+    "alma": {
+      "title": "The quietness your spirit needs",
+      "subtitle": "Your private moment of renewal",
+      "desc": "Write freely about what troubles your thoughts: the urge to control tomorrow, financial concerns, or the fatigue of carrying everything alone.",
+      "f1Title": "Pastoral Word:",
+      "f1Desc": "Thoughtful guidance that removes guilt and reminds you that you were never designed to hold the world on your shoulders.",
+      "f2Title": "Living Promise:",
+      "f2Desc": "Precise Scripture passages (Matthew 11:28) to substitute inner restlessness with divine stillness.",
+      "f3Title": "Restful Prayer:",
+      "f3Desc": "A first-person prayer to surrender your pending worries before going to sleep."
+    },
+    "intercession": {
+      "title": "Standing in prayer for loved ones",
+      "subtitle": "Galatians 6:2 · Genuine Compassion",
+      "desc": "Uplift a sibling, child, or friend walking through hardship. The platform generates two thoughtful ways to bless them:",
+      "c1Title": "1. Full pastoral encouragement letter",
+      "c1Desc": "Send an encouraging message tailored with their name, Scripture (Philippians 4:19), and prayer directly via messaging.",
+      "c2Title": "2. Peaceful Story Card",
+      "c2Desc": "Export an aesthetic vertical 9:16 canvas for your stories or phone wallpaper without revealing personal details."
+    },
+    "covenant": {
+      "title": "A sacred covenant of peace and grace",
+      "subtitle": "Gentle reconciliation on a shared screen",
+      "desc": "Inspired by Matthew 5:9. When busyness causes distance, two people share the screen, listen with humility, and let wisdom direct their home:",
+      "f1Title": "Balanced reflections:",
+      "f1Desc": "Encouragement for both individuals that disarms tension without taking sides.",
+      "f2Title": "Spoken peacemaking vow:",
+      "f2Desc": "A mutual commitment read aloud to prioritize unity above the desire to win an argument.",
+      "f3Title": "Reconciliation prayer:",
+      "f3Desc": "A shared prayer seeking forgiveness and renewal together before God."
+    }
+  },
+  "canvas": {
+    "lightBadge": "Word for the Heart",
+    "lightVerse": "Grace liberates you from the exhausting illusion of total self-reliance. You are not tasked with maintaining the universe; your steps are upheld by divine care.",
+    "lightRef": "Inspired by Matthew 11:28",
+    "goldBadge": "Prayer of Protection",
+    "goldVerse": "The Creator who provides for the birds of the air knows your needs in detail. Even when human stamina runs out, divine faithfulness remains steady.",
+    "goldRef": "Inspired by Philippians 4:19",
+    "oliveBadge": "Mutual Peacemaking Vow",
+    "oliveVerse": "We lay down defensive reactions and pride today. We acknowledge that emotional exhaustion should draw us to protect each other, not divide us.",
+    "oliveRef": "Matthew 5:9 · Blessed Are the Peacemakers"
+  },
+  "gallery": {
+    "badge": "Visual Seeds of Peace",
+    "title": "Canvases made to save and encourage",
+    "subtitle": "Frame your promises with handcrafted artisan textures made for your phone or to send as spiritual comfort.",
+    "linenTitle": "Essential Linen",
+    "linenTag": "Always included",
+    "parchmentTitle": "Sacred Parchment",
+    "oliveTitle": "Garden Olive",
+    "goldTitle": "Gold & Ember"
   },
   "features": {
-    "title": "Crafted with doctrinal depth and aesthetic reverence",
-    "subtitle": "Every detail protects your focus, your mind, and your privacy."
+    "title": "Reverent attention in every detail",
+    "subtitle": "Constructed with spiritual care to accompany both your days and nights.",
+    "f1Title": "Memorial Stones (Eben-ezer)",
+    "f1Desc": "Keep record of the promises that sustained you, creating a lasting testimony of grace in your journey.",
+    "f2Title": "Nighttime Vigil Mode",
+    "f2Desc": "As darkness arrives, the display transitions into a warm palette with soothing passages to aid restorative sleep.",
+    "f3Title": "Uncompromising Privacy",
+    "f3Desc": "Your journal entries and prayers never leave your device or enter remote databases. It stays strictly confidential."
   },
-  "cta_section": {
+  "faq": {
+    "badge": "Doctrinal Clarity and Purpose",
+    "title": "Honest Questions & Scriptural Perspectives",
+    "subtitle": "Discover the pastoral principles underlying God Got You and why it complements your local church community.",
+    "foundationLabel": "Scriptural Anchor:",
+    "items": [
+      {
+        "q": "Isn't Artificial Intelligence dangerous? Isn't it meant to harm spiritual life?",
+        "verse": "2 Timothy 1:7 · A spirit of power, love, and sound judgment.",
+        "a": "Every major invention sparked religious hesitation: when Gutenberg pioneered the printing press, critics argued mechanical reproduction desecrated holy words; yet it delivered the Bible into common homes. Early radio was condemned, yet it now proclaims hope across closed borders. Computing is math without a soul. While malicious actors use technology to deceive, people of faith can redeem it to deliver timely biblical peace in moments of acute pain."
+      },
+      {
+        "q": "Why rely on algorithms and phones when technology often divides households?",
+        "verse": "Matthew 15:19 · Intentions originate within the human heart.",
+        "a": "A block of glass and metal cannot commit wrongdoing; the human intention behind it does. Tools amplify whatever lives inside us. While digital industries deploy algorithms to monopolize attention and feed addictions, God Got You offers a counter-presence: turning that exact same screen into an altar of pause and spiritual restoration."
+      },
+      {
+        "q": "Is this application attempting to replace physical Bible reading?",
+        "verse": "Matthew 4:4 · Sustained by every truth spoken by God.",
+        "a": "Never. A physical Bible is our essential daily sustenance. God Got You acts as an immediate first-aid resource during a panic attack, late-night insomnia, or intense pressure. In an emergency, first aid stabilizes you and directs you back to the Source."
+      },
+      {
+        "q": "Doesn't this discourage people from attending their local church?",
+        "verse": "Luke 15:4 · Leaving ninety-nine to seek the exhausted one.",
+        "a": "Quite the opposite: it prepares hurting people to return. Someone trapped in guilt, anxiety, or burnout rarely enters a congregation comfortably. Our sanctuary reaches them in their exhaustion, reminds them of grace, and helps restore their mind to seek genuine fellowship."
+      },
+      {
+        "q": "How can software provide authentic comfort? Isn't it impersonal?",
+        "verse": "Romans 10:17 · Faith taking root through the hearing of Truth.",
+        "a": "Technology does not create peace; peace proceeds from the Spirit through Scripture. The app is merely the messenger delivering a focused biblical reminder right when your thoughts are overwhelmed. If early believers used papyrus letters, today we use digital screens."
+      },
+      {
+        "q": "Isn't this 'cafeteria spirituality' or verses taken out of context?",
+        "verse": "Ephesians 6:17 · Wielding the sword of the Spirit.",
+        "a": "We do not offer shallow motivational platitudes. We provide biblical anchors for real burdens. In the wilderness, Jesus cited precise verses to overcome specific attacks. God Got You provides an exact biblical pillar to anchor you in acute trials."
+      },
+      {
+        "q": "I do not consider myself religious. Will this try to force doctrines on me?",
+        "verse": "Matthew 11:28 · Rest promised to all who labor heavily.",
+        "a": "You will find no judgment or dogmatic coercion here. God Got You is a private, tranquil space to empty heavy thoughts and receive ancient, reassuring promises of hope and calm. Explore it with complete freedom."
+      },
+      {
+        "q": "Tools like YouVersion and Glorify already exist. What makes this different?",
+        "verse": "Psalm 46:1 · An ever-present refuge in seasons of trouble.",
+        "a": "YouVersion is an invaluable scripture library; Glorify focuses on structured devotional routines. God Got You responds to acute distress: you open it the very second anxiety hits to receive immediate perspective and breathe again."
+      },
+      {
+        "q": "Is it confidential to unburden myself here? How is data handled?",
+        "verse": "Proverbs 11:13 · The trustworthy heart keeps matters in secret.",
+        "a": "Your moments of vulnerability are sacred. We never sell profile data, track your browsing for advertisers, or run third-party ad networks. Everything is stored strictly inside your phone's local storage."
+      },
+      {
+        "q": "Why is there a paid tier? Should spiritual resources have a fee?",
+        "verse": "Proverbs 14:23 · Honest labor yields its rightful reward.",
+        "a": "Access to foundational biblical comfort is and will always remain completely free. Maintaining fast servers, secure infrastructure, and engineering demands real upkeep. If harmful industries charge without restraint, ethical digital sanctuaries should be sustained honorably."
+      },
+      {
+        "q": "For severe anxiety, isn't professional mental healthcare better than an app?",
+        "verse": "1 Thessalonians 5:23 · Preserving spirit, soul, and body entirely.",
+        "a": "We wholeheartedly respect and recommend licensed medical and psychological assistance. Humanity is tripartite: body, mind, and spirit. Therapy addresses psychological and cognitive health, while Scripture anchors the soul. They work in harmony."
+      },
+      {
+        "q": "Why aren't you on the Apple App Store or Google Play Store?",
+        "verse": "1 Corinthians 9:19 · Becoming all things to serve and reach everyone.",
+        "a": "We intentionally operate as an open Progressive Web App (PWA) for three essential reasons: First, universal access—anyone on iPhone, Android, or laptop can open the sanctuary in seconds without consuming device storage. Second, zero middleman costs—store fees of up to 30% inflate maintenance costs. Third, independence—avoiding centralized app stores ensures this confidential haven stays uninterrupted, free from third-party control, and private on your device."
+      }
+    ]
+  },
+  "finalCta": {
     "title": "Rest your heart in the truth that never changes",
-    "subtitle": "Instantly accessible on web browsers, iPhone, or Android without mandatory store downloads.",
-    "btn": "Open God Got You Now"
+    "subtitle": "Available immediately on your browser, iPhone, or Android without mandatory app store downloads.",
+    "button": "Enter the Sanctuary Now"
   },
   "footer": {
-    "verse": "“Your word is a lamp to my feet and a light to my path.” — Psalm 119:105"
+    "verse": "«Your word is a lamp to my feet and a light to my path.» — Psalm 119:105",
+    "privacy": "Privacy & Data Policy",
+    "terms": "Terms of Service",
+    "refunds": "14-Day Guarantee & Refunds"
   }
 }
