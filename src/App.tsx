@@ -16,7 +16,11 @@ import {
   Crown,
   Share2,
   Send,
-  HelpCircle
+  HelpCircle,
+  Shield,
+  ShieldAlert,
+  Users,
+  Wind
 } from 'lucide-react';
 import { useTranslation } from './context/LanguageContext';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
@@ -30,8 +34,79 @@ interface FaqItem {
   a: string;
 }
 
+const FREEDOM_LANDING_COPY = {
+  es: {
+    tabLabel: 'Pacto de Libertad',
+    badgeNew: 'GRATIS',
+    title: 'Pacto de Libertad y Rescate en 90s',
+    subtitle: 'Dominio propio, pureza y acompañamiento anónimo 1 a 1 sin vigilancia invasiva.',
+    desc: 'Para las batallas que nadie ve a las 2:00 AM: impulsos sexuales, pornografía, comparación digital o ira impulsiva. Sin registros con correo ni software espía; solo herramientas reales para cortar el impulso y caminar respaldado.',
+    f1Title: 'Alias Anónimo (Zero-PII):',
+    f1Desc: 'Recibes un alias como Faro-418. Tus notas íntimas jamás salen de tu dispositivo.',
+    f2Title: 'Botón SOS de 90 Segundos:',
+    f2Desc: 'Respiración guiada 4-4-6, audio de rescate y ancla bíblica para frenar la ola química.',
+    f3Title: 'Compañero 1 a 1 por Código:',
+    f3Desc: 'Vincula a un amigo o mentor con un código temporal de 24h para enviar alertas silenciosas de oración.',
+    cardHeader: 'RESCATE SOS · 02:14 AM',
+    cardAlias: 'Alias Activo: Faro-418 · 93% Consistencia',
+    cardQuote: '"El impulso es solo una ola química pasajera de menos de 10 minutos. Respira, deja el teléfono sobre la mesa y recuerda quién eres en Cristo."',
+    cardBtn: 'Avisar a mi compañero ("Ora por mí")',
+  },
+  en: {
+    tabLabel: 'Freedom Pact',
+    badgeNew: 'FREE',
+    title: 'Freedom Pact & 90s Rescue',
+    subtitle: 'Self-control, purity, and anonymous 1-on-1 support without invasive spying.',
+    desc: 'Built for the battles nobody sees at 2:00 AM: sexual urges, pornography, social media comparison, or impulsive anger. No invasive screen monitoring—just practical tools to break the urge and walk supported.',
+    f1Title: 'Anonymous Alias (Zero-PII):',
+    f1Desc: 'Receive an alias like Beacon-418. Your private mirror notes never leave your device.',
+    f2Title: '90-Second SOS Rescue:',
+    f2Desc: 'Guided 4-4-6 breathing, audio rescue, and biblical anchors to ride out the dopamine wave.',
+    f3Title: '1-on-1 Code Partner:',
+    f3Desc: 'Link a trusted friend or mentor via a 24h invite code to send silent prayer alerts.',
+    cardHeader: 'SOS RESCUE · 02:14 AM',
+    cardAlias: 'Active Alias: Beacon-418 · 93% Consistency',
+    cardQuote: '"An urge is only a temporary chemical wave lasting under 10 minutes. Breathe, set your phone down, and remember who you are in Christ."',
+    cardBtn: 'Ping Pact Partner ("Pray for me")',
+  },
+  pt: {
+    tabLabel: 'Pacto de Liberdade',
+    badgeNew: 'GRÁTIS',
+    title: 'Pacto de Liberdade e Resgate em 90s',
+    subtitle: 'Domínio próprio, pureza e acompanhamento anônimo 1 a 1 sem vigilância invasiva.',
+    desc: 'Para as batalhas silenciosas das 2:00 AM: impulsos visuais, pornografia, comparação digital ou raiva impulsiva. Sem rastros nem captura de tela.',
+    f1Title: 'Codinome Anônimo (Zero-PII):',
+    f1Desc: 'Você recebe um codinome como Farol-418. Suas notas íntimas nunca saem do seu dispositivo.',
+    f2Title: 'Botão SOS de 90 Segundos:',
+    f2Desc: 'Respiração guiada 4-4-6, áudio de resgate e âncora bíblica imediata.',
+    f3Title: 'Parceiro 1 a 1 por Código:',
+    f3Desc: 'Conecte-se com um amigo ou mentor por código temporário de 24h para alertas silenciosos de oração.',
+    cardHeader: 'RESGATE SOS · 02:14 AM',
+    cardAlias: 'Codinome Ativo: Farol-418 · 93% Consistência',
+    cardQuote: '"O impulso é apenas uma onda química passageira. Respire, deixe o celular na mesa e lembre-se de quem você é em Cristo."',
+    cardBtn: 'Avisar parceiro ("Ore por mim")',
+  },
+  fr: {
+    tabLabel: 'Pacte de Liberté',
+    badgeNew: 'GRATUIT',
+    title: 'Pacte de Liberté et Secours 90s',
+    subtitle: 'Maîtrise de soi, pureté et accompagnement anonyme 1 à 1 sans surveillance invasive.',
+    desc: 'Pour les combats silencieux à 2h du matin : pulsions, pornographie, comparaison numérique ou colère impulsive. Zéro espionnage d’écran, uniquement des outils concrets pour retrouver la paix.',
+    f1Title: 'Alias Anonyme (Zero-PII) :',
+    f1Desc: 'Recevez un alias comme Phare-418. Vos notes intimes ne quittent jamais votre appareil.',
+    f2Title: 'Bouton SOS 90 Secondes :',
+    f2Desc: 'Respiration guidée 4-4-6, audio de secours et ancre biblique immédiate.',
+    f3Title: 'Partenaire 1 à 1 par Code :',
+    f3Desc: 'Reliez un ami ou mentor via un code de 24h pour envoyer des alertes de prière discrètes.',
+    cardHeader: 'SECOURS SOS · 02:14 AM',
+    cardAlias: 'Alias Actif : Phare-418 · 93% Constance',
+    cardQuote: '"La pulsion n’est qu’une vague chimique passagère. Respirez, posez votre téléphone et souvenez-vous de qui vous êtes en Christ."',
+    cardBtn: 'Alerter mon partenaire ("Prie pour moi")',
+  },
+};
+
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'alma' | 'intercesion' | 'pacto'>('alma');
+  const [activeTab, setActiveTab] = useState<'alma' | 'libertad' | 'intercesion' | 'pacto'>('alma');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [legalModalOpen, setLegalModalOpen] = useState<boolean>(false);
   const [legalInitialTab, setLegalInitialTab] = useState<'privacy' | 'terms' | 'refunds'>('privacy');
@@ -39,6 +114,7 @@ export default function App() {
   const { t, locale, tKey } = useTranslation();
 
   const targetAppUrl = `https://godgotyou.app?lang=${locale}`;
+  const freedomCopy = FREEDOM_LANDING_COPY[locale as keyof typeof FREEDOM_LANDING_COPY] || FREEDOM_LANDING_COPY.es;
 
   const openLegal = (tab: 'privacy' | 'terms' | 'refunds') => {
     setLegalInitialTab(tab);
@@ -58,9 +134,9 @@ export default function App() {
       <SeoHead />
 
       {/* 1. NAVEGACIÓN SUPERIOR */}
-      <header className="sticky top-0 z-40 bg-[#FAF8F5]/90 backdrop-blur-md border-b border-[#EAE5DC]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3 group">
+      <header className="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#EAE5DC]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between gap-2">
+          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
             <img 
               src="/logo.png" 
               alt="GodGotYou Sello" 
@@ -70,20 +146,20 @@ export default function App() {
               <span className="font-serif-display text-lg sm:text-2xl font-bold tracking-tight text-[#1A1A1A] leading-none">
                 God Got You
               </span>
-              <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-wider text-[#5E7153] mt-0.5">
+              <span className="hidden sm:block text-[11px] font-sans font-semibold tracking-wider text-[#5E7153] mt-0.5">
                 {tKey('nav.tagline')}
               </span>
             </div>
           </a>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
 
             <a 
               href={targetAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-2xl bg-[#2D4523] hover:bg-[#23371B] text-white text-xs sm:text-sm font-serif-display font-bold tracking-wider uppercase transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-98 cursor-pointer"
+              className="inline-flex items-center gap-2 px-3.5 sm:px-5 py-2.5 rounded-2xl bg-[#2D4523] hover:bg-[#23371B] text-white text-xs sm:text-sm font-serif-display font-bold tracking-wider uppercase transition-all shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-98 cursor-pointer"
             >
               <span>{tKey('nav.cta')}</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#D4B373]" />
@@ -103,7 +179,7 @@ export default function App() {
             <span>{tKey('hero.badge')}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif-display font-bold text-[#1A1A1A] leading-[1.18] tracking-tight max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif-display font-bold text-[#1A1A1A] leading-[1.16] tracking-tight max-w-4xl mx-auto">
             {tKey('hero.title')}
           </h1>
 
@@ -123,7 +199,7 @@ export default function App() {
             </a>
 
             <a 
-              href="#manifiesto"
+              href="#pilares"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl bg-white hover:bg-[#F5F2EB] border border-[#E2DDD5] text-[#2C3E50] text-sm font-semibold tracking-wide transition-all shadow-xs cursor-pointer"
             >
               <span>{tKey('hero.secondaryCta')}</span>
@@ -131,12 +207,12 @@ export default function App() {
             </a>
           </div>
 
-          <div className="pt-6 flex items-center justify-center gap-6 text-xs text-[#64748B] flex-wrap">
+          <div className="pt-4 flex items-center justify-center gap-4 sm:gap-6 text-xs text-[#64748B] flex-wrap">
             <div className="flex items-center gap-2">
               <Lock className="w-3.5 h-3.5 text-[#5E7153]" />
               <span>{tKey('hero.privacyProof')}</span>
             </div>
-            <span>·</span>
+            <span className="hidden sm:inline">·</span>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#5E7153]" />
               <span>{tKey('hero.availabilityProof')}</span>
@@ -144,12 +220,11 @@ export default function App() {
           </div>
         </div>
 
-        {/* Mockup de la App */}
+        {/* Mockup Editorial de la App (Bordes limpios sin corte inferior) */}
         <div className="max-w-4xl mx-auto mt-12 sm:mt-16 relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF8F5] via-transparent to-transparent z-10 pointer-events-none" />
-          <div className="rounded-3xl p-3 sm:p-5 bg-white border border-[#EAE5DC] shadow-[0_20px_60px_rgba(0,0,0,0.08)] relative overflow-hidden transition-all duration-300 hover:shadow-[0_25px_70px_rgba(45,69,35,0.12)]">
+          <div className="rounded-3xl p-3 sm:p-5 bg-white border border-[#EAE5DC] shadow-[0_20px_60px_rgba(0,0,0,0.07)] relative overflow-hidden transition-all duration-300 hover:shadow-[0_25px_70px_rgba(45,69,35,0.12)]">
             <div className="rounded-2xl p-6 sm:p-10 border border-[#E8E1D5] bg-[#FAF9F6] text-left space-y-6 relative">
-              <div className="flex items-center justify-between border-b border-[#EAE5DC] pb-4">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#EAE5DC] pb-4">
                 <div className="flex items-center gap-3">
                   <img src="/medallion-master.png" alt="Sello" className="w-10 h-10 object-contain drop-shadow-xs" />
                   <div>
@@ -194,7 +269,7 @@ export default function App() {
             {' '}{tKey('manifesto.titleEnd')}
           </h2>
 
-          <div className="p-8 sm:p-12 rounded-3xl bg-white border border-[#E8E1D5] shadow-xs text-left relative overflow-hidden">
+          <div className="p-7 sm:p-12 rounded-3xl bg-white border border-[#E8E1D5] shadow-xs text-left relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4B373]/10 rounded-bl-full pointer-events-none" />
 
             <p className="font-serif-bible text-base sm:text-lg text-[#334155] leading-relaxed">
@@ -219,7 +294,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 3. LOS 3 CAMINOS DE GRACIA */}
+      {/* 3. LOS 4 CAMINOS DE GRACIA Y LIBERTAD */}
       <section id="pilares" className="py-16 sm:py-24 bg-white border-y border-[#EAE5DC] px-4 sm:px-6">
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -235,9 +310,9 @@ export default function App() {
             </p>
           </div>
 
-          {/* Selector de Pestañas */}
+          {/* Selector de 4 Pestañas */}
           <div className="flex items-center justify-center">
-            <div className="inline-flex p-1.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-inner gap-1 flex-wrap justify-center">
+            <div className="inline-flex p-1.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-inner gap-1.5 flex-wrap justify-center">
               <button
                 type="button"
                 onClick={() => setActiveTab('alma')}
@@ -248,6 +323,22 @@ export default function App() {
                 }`}
               >
                 {tKey('paths.tab1')}
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setActiveTab('libertad')}
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold font-serif-display transition-all cursor-pointer flex items-center gap-1.5 ${
+                  activeTab === 'libertad'
+                    ? 'bg-[#2D4523] text-white shadow-xs'
+                    : 'text-[#4A5568] hover:text-[#1A1A1A]'
+                }`}
+              >
+                <Shield className="w-3.5 h-3.5 text-[#D4B373]" />
+                <span>{freedomCopy.tabLabel}</span>
+                <span className="text-[9px] px-1.5 py-0.5 rounded-full font-bold bg-[#5E7153]/20 text-[#2D4523]">
+                  {freedomCopy.badgeNew}
+                </span>
               </button>
 
               <button
@@ -272,7 +363,7 @@ export default function App() {
                 }`}
               >
                 <span>{tKey('paths.tab3')}</span>
-                <span className="text-[9px] px-1.5 py-0.2 rounded-full font-bold bg-[#D4B373]/30 text-[#8C6D28]">
+                <span className="text-[9px] px-1.5 py-0.5 rounded-full font-bold bg-[#D4B373]/30 text-[#8C6D28]">
                   PRO
                 </span>
               </button>
@@ -301,16 +392,16 @@ export default function App() {
                     {tKey('paths.alma.desc')}
                   </p>
                   <ul className="space-y-2.5 text-xs sm:text-sm text-[#2C3E50]">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
                       <span><strong>{tKey('paths.alma.f1Title')}</strong> {tKey('paths.alma.f1Desc')}</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
                       <span><strong>{tKey('paths.alma.f2Title')}</strong> {tKey('paths.alma.f2Desc')}</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
                       <span><strong>{tKey('paths.alma.f3Title')}</strong> {tKey('paths.alma.f3Desc')}</span>
                     </li>
                   </ul>
@@ -336,7 +427,81 @@ export default function App() {
               </div>
             )}
 
-            {/* 2. INTERCEDER POR ALGUIEN */}
+            {/* 2. PACTO DE LIBERTAD (NUEVO MÓDULO ANÓNIMO Y SOS) */}
+            {activeTab === 'libertad' && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
+                <div className="space-y-4 text-left">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-2xl bg-[#2D4523] text-[#D4B373] flex items-center justify-center shrink-0 shadow-xs">
+                      <Shield className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A]">
+                        {freedomCopy.title}
+                      </h3>
+                      <span className="text-xs text-[#5E7153] font-semibold">
+                        {freedomCopy.subtitle}
+                      </span>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[#4A5568] leading-relaxed">
+                    {freedomCopy.desc}
+                  </p>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-[#2C3E50]">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
+                      <span><strong>{freedomCopy.f1Title}</strong> {freedomCopy.f1Desc}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
+                      <span><strong>{freedomCopy.f2Title}</strong> {freedomCopy.f2Desc}</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
+                      <span><strong>{freedomCopy.f3Title}</strong> {freedomCopy.f3Desc}</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Tarjeta Vista Previa Modo Nocturno SOS */}
+                <div className="rounded-3xl p-6 bg-[#121619] border-2 border-[#D4B373]/40 text-[#F0EBE1] shadow-2xl max-w-sm mx-auto space-y-5 text-left">
+                  <div className="flex items-center justify-between border-b border-white/10 pb-3.5">
+                    <div className="flex items-center gap-2">
+                      <ShieldAlert className="w-4 h-4 text-amber-400" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400">
+                        {freedomCopy.cardHeader}
+                      </span>
+                    </div>
+                    <Wind className="w-4 h-4 text-[#D4B373]" />
+                  </div>
+
+                  <div className="space-y-1">
+                    <span className="text-[11px] font-mono text-[#D4B373] block">
+                      {freedomCopy.cardAlias}
+                    </span>
+                    <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+                      <div className="w-[93%] h-full bg-emerald-500 rounded-full" />
+                    </div>
+                  </div>
+
+                  <p className="font-serif-bible italic text-xs sm:text-sm text-[#E3DDD3] leading-relaxed bg-white/5 p-4 rounded-2xl border border-white/10">
+                    {freedomCopy.cardQuote}
+                  </p>
+
+                  <a
+                    href={targetAppUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3 px-4 rounded-xl bg-[#D4B373] text-[#0E1113] font-bold text-xs flex items-center justify-center gap-2 hover:opacity-95 transition"
+                  >
+                    <Users className="w-3.5 h-3.5" />
+                    <span>{freedomCopy.cardBtn}</span>
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {/* 3. INTERCEDER POR ALGUIEN */}
             {activeTab === 'intercesion' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
@@ -401,7 +566,7 @@ export default function App() {
               </div>
             )}
 
-            {/* 3. ESPACIO COMPARTIDO */}
+            {/* 4. ESPACIO COMPARTIDO */}
             {activeTab === 'pacto' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
@@ -425,16 +590,16 @@ export default function App() {
                     {tKey('paths.covenant.desc')}
                   </p>
                   <ul className="space-y-2.5 text-xs sm:text-sm text-[#2C3E50]">
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
                       <span><strong>{tKey('paths.covenant.f1Title')}</strong> {tKey('paths.covenant.f1Desc')}</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
                       <span><strong>{tKey('paths.covenant.f2Title')}</strong> {tKey('paths.covenant.f2Desc')}</span>
                     </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0" />
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
                       <span><strong>{tKey('paths.covenant.f3Title')}</strong> {tKey('paths.covenant.f3Desc')}</span>
                     </li>
                   </ul>
@@ -478,9 +643,9 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
             <div className="rounded-2xl overflow-hidden border border-[#E8E1D5] bg-white shadow-xs group hover:shadow-md transition-all">
-              <div className="aspect-[9/14] bg-cover bg-center" style={{ backgroundImage: "url('/story-bg-free-light.png')" }} />
+              <div className="aspect-[9/13] bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.02]" style={{ backgroundImage: "url('/story-bg-free-light.png')" }} />
               <div className="p-3 text-center">
                 <span className="text-xs font-serif-display font-bold text-[#1A1A1A] block">
                   {tKey('gallery.linenTitle')}
@@ -492,7 +657,7 @@ export default function App() {
             </div>
 
             <div className="rounded-2xl overflow-hidden border border-[#ECD9C6] bg-white shadow-xs group hover:shadow-md transition-all ring-1 ring-[#D4B373]/30">
-              <div className="aspect-[9/14] bg-cover bg-center" style={{ backgroundImage: "url('/story-bg-pergamino.png')" }} />
+              <div className="aspect-[9/13] bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.02]" style={{ backgroundImage: "url('/story-bg-pergamino.png')" }} />
               <div className="p-3 text-center">
                 <span className="text-xs font-serif-display font-bold text-[#1A1A1A] block">
                   {tKey('gallery.parchmentTitle')}
@@ -502,7 +667,7 @@ export default function App() {
             </div>
 
             <div className="rounded-2xl overflow-hidden border border-[#2D4523]/30 bg-white shadow-xs group hover:shadow-md transition-all ring-1 ring-[#2D4523]/30">
-              <div className="aspect-[9/14] bg-cover bg-center" style={{ backgroundImage: "url('/story-bg-olivo.png')" }} />
+              <div className="aspect-[9/13] bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.02]" style={{ backgroundImage: "url('/story-bg-olivo.png')" }} />
               <div className="p-3 text-center">
                 <span className="text-xs font-serif-display font-bold text-[#1A1A1A] block">
                   {tKey('gallery.oliveTitle')}
@@ -512,7 +677,7 @@ export default function App() {
             </div>
 
             <div className="rounded-2xl overflow-hidden border border-black/40 bg-white shadow-xs group hover:shadow-md transition-all ring-1 ring-[#D4B373]/40">
-              <div className="aspect-[9/14] bg-cover bg-center" style={{ backgroundImage: "url('/story-bg-oro-ceniza.png')" }} />
+              <div className="aspect-[9/13] bg-cover bg-center transition-transform duration-500 group-hover:scale-[1.02]" style={{ backgroundImage: "url('/story-bg-oro-ceniza.png')" }} />
               <div className="p-3 text-center">
                 <span className="text-xs font-serif-display font-bold text-[#1A1A1A] block">
                   {tKey('gallery.goldTitle')}
@@ -524,7 +689,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. DEFENSE INSTITUCIONAL Y DOCTRINAL (12 FAQS) */}
+      {/* 4. DEFENSE INSTITUCIONAL Y DOCTRINAL (FAQS) */}
       <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-[#EAE5DC]">
         <div className="max-w-4xl mx-auto space-y-12">
           
