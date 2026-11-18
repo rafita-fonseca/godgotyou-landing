@@ -33,11 +33,31 @@ interface FaqItem {
   a: string;
 }
 
+const PATHS_HEADER_COPY = {
+  es: {
+    title: 'Caminos de gracia para encontrar refugio en Su verdad',
+    subtitle: 'Para tu desahogo íntimo, para vencer batallas ocultas, para interceder por quienes amas y para sanar en paz el hogar.',
+  },
+  en: {
+    title: 'Paths of grace to find refuge in His truth',
+    subtitle: 'For personal release, overcoming hidden battles, interceding for loved ones, and restoring peace at home.',
+  },
+  pt: {
+    title: 'Caminhos de graça para encontrar refúgio na Sua verdade',
+    subtitle: 'Para seu desabafo íntimo, para vencer batalhas ocultas, para interceder por quem você ama e para restaurar a paz no lar.',
+  },
+  fr: {
+    title: 'Chemins de grâce pour trouver refuge dans Sa vérité',
+    subtitle: 'Pour votre dépôt intime, vaincre les combats cachés, intercéder pour vos proches et apaiser le foyer.',
+  },
+};
+
 const FREEDOM_LANDING_COPY = {
   es: {
     tabLabel: 'Pacto de Libertad',
     badgeNew: 'GRATIS',
-    title: 'Pacto de Libertad para Batallas Ocultas',
+    dropCapLetter: 'P',
+    titleAfterCap: 'acto de Libertad para Batallas Ocultas',
     subtitle: 'Pureza, lealtad del corazón y respaldo anónimo 1 a 1 sin vigilancia invasiva.',
     desc: 'Un santuario silencioso y discreto para las luchas de las que nadie habla en voz alta: pornografía, tentación de infidelidad emocional o digital, ruido compulsivo, insomnio e ira en casa. Sin correos ni software espía; solo herramientas bíblicas prácticas para cortar el impulso.',
     f1Title: '5 Rutas de Batalla Real:',
@@ -54,7 +74,8 @@ const FREEDOM_LANDING_COPY = {
   en: {
     tabLabel: 'Freedom Pact',
     badgeNew: 'FREE',
-    title: 'Freedom Pact for Hidden Battles',
+    dropCapLetter: 'F',
+    titleAfterCap: 'reedom Pact for Hidden Battles',
     subtitle: 'Purity, heart loyalty, and anonymous 1-on-1 backing without invasive spying.',
     desc: 'A quiet, discreet sanctuary built for the battles few dare to speak aloud: pornography, emotional or digital infidelity temptation, digital noise, midnight anxiety, and anger at home. No emails or screen-spying agents—just practical biblical steps to break the urge.',
     f1Title: '5 Real Battle Paths:',
@@ -71,7 +92,8 @@ const FREEDOM_LANDING_COPY = {
   pt: {
     tabLabel: 'Pacto de Liberdade',
     badgeNew: 'GRÁTIS',
-    title: 'Pacto de Liberdade para Batalhas Ocultas',
+    dropCapLetter: 'P',
+    titleAfterCap: 'acto de Liberdade para Batalhas Ocultas',
     subtitle: 'Pureza, lealdade do coração e apoio anônimo 1 a 1 sem vigilância invasiva.',
     desc: 'Um santuário silencioso e discreto para lutas íntimas de que quase ninguém fala: pornografia, tentação de infidelidade emocional ou digital, ruído digital, insônia e raiva em casa. Sem e-mail nem captura de tela.',
     f1Title: '5 Trilhas de Batalha Real:',
@@ -88,7 +110,8 @@ const FREEDOM_LANDING_COPY = {
   fr: {
     tabLabel: 'Pacte de Liberté',
     badgeNew: 'GRATUIT',
-    title: 'Pacte de Liberté pour les Combats Cachés',
+    dropCapLetter: 'P',
+    titleAfterCap: 'acte de Liberté pour les Combats Cachés',
     subtitle: 'Pureté, loyauté du cœur et soutien anonyme 1 à 1 sans surveillance intrusive.',
     desc: 'Un sanctuaire silencieux et discret pour les batailles intérieures dont on ose rarement parler : pornographie, tentation d’infidélité émotionnelle ou numérique, bruit numérique, insomnie et colère. Zéro espionnage d’écran.',
     f1Title: '5 Parcours de Combat Réel :',
@@ -155,6 +178,9 @@ const EXTRA_FREEDOM_FAQS: Record<'es' | 'en' | 'pt' | 'fr', FaqItem[]> = {
   ],
 };
 
+// Limpia cualquier numeración heredada ("1. ", "2. ", "3. ") en los textos de pestañas
+const stripLeadingNumber = (label: string) => label.replace(/^\d+\.\s*/, '');
+
 export default function App() {
   const [activeTab, setActiveTab] = useState<'alma' | 'libertad' | 'intercesion' | 'pacto'>('alma');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -166,6 +192,7 @@ export default function App() {
   const safeLocale = (locale === 'en' || locale === 'pt' || locale === 'fr') ? locale : 'es';
   const targetAppUrl = `https://godgotyou.app?lang=${safeLocale}`;
   const freedomCopy = FREEDOM_LANDING_COPY[safeLocale];
+  const pathsHeader = PATHS_HEADER_COPY[safeLocale];
 
   const openLegal = (tab: 'privacy' | 'terms' | 'refunds') => {
     setLegalInitialTab(tab);
@@ -331,7 +358,7 @@ export default function App() {
               <img 
                 src="/assets/drop-caps/cap-E.png" 
                 alt="E" 
-                className="float-left w-14 h-14 sm:w-16 sm:h-16 object-contain mr-3.5 mb-1 select-none pointer-events-none drop-shadow-xs" 
+                className="float-left w-16 h-16 sm:w-20 sm:h-20 object-contain mr-4 mb-1 select-none pointer-events-none drop-shadow-xs" 
               />
               {tKey('manifesto.textAfterDropCap')}
             </p>
@@ -349,7 +376,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 3. LOS 4 CAMINOS DE GRACIA Y LIBERTAD */}
+      {/* 3. CAMINOS DE GRACIA Y LIBERTAD (SIN NUMERACIÓN NI ORDEN DE IMPORTANCIA) */}
       <section id="pilares" className="py-16 sm:py-24 bg-white border-y border-[#EAE5DC] px-4 sm:px-6">
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -358,14 +385,14 @@ export default function App() {
               {tKey('paths.badge')}
             </span>
             <h2 className="text-2xl sm:text-4xl font-serif-display font-bold text-[#1A1A1A]">
-              {tKey('paths.title')}
+              {pathsHeader.title}
             </h2>
             <p className="text-sm text-[#64748B] font-serif-bible italic">
-              {tKey('paths.subtitle')}
+              {pathsHeader.subtitle}
             </p>
           </div>
 
-          {/* Selector de 4 Pestañas */}
+          {/* Selector de Pestañas sin números */}
           <div className="flex items-center justify-center">
             <div className="inline-flex p-1.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-inner gap-1.5 flex-wrap justify-center">
               <button
@@ -377,7 +404,7 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                {tKey('paths.tab1')}
+                {stripLeadingNumber(tKey('paths.tab1'))}
               </button>
 
               <button
@@ -391,7 +418,13 @@ export default function App() {
               >
                 <Shield className="w-3.5 h-3.5 text-[#D4B373]" />
                 <span>{freedomCopy.tabLabel}</span>
-                <span className="text-[9px] px-1.5 py-0.5 rounded-full font-bold bg-[#5E7153]/20 text-[#2D4523]">
+                <span
+                  className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${
+                    activeTab === 'libertad'
+                      ? 'bg-[#D4B373] text-[#0E1113]'
+                      : 'bg-[#5E7153]/15 text-[#2D4523]'
+                  }`}
+                >
                   {freedomCopy.badgeNew}
                 </span>
               </button>
@@ -405,7 +438,7 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                {tKey('paths.tab2')}
+                {stripLeadingNumber(tKey('paths.tab2'))}
               </button>
 
               <button
@@ -417,28 +450,38 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                <span>{tKey('paths.tab3')}</span>
-                <span className="text-[9px] px-1.5 py-0.5 rounded-full font-bold bg-[#D4B373]/30 text-[#8C6D28]">
+                <span>{stripLeadingNumber(tKey('paths.tab3'))}</span>
+                <span
+                  className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${
+                    activeTab === 'pacto'
+                      ? 'bg-[#D4B373] text-[#0E1113]'
+                      : 'bg-[#D4B373]/30 text-[#8C6D28]'
+                  }`}
+                >
                   PRO
                 </span>
               </button>
             </div>
           </div>
 
-          {/* Tarjetas interactivas */}
+          {/* Tarjetas interactivas con Letras Capitales de Procreate */}
           <div className="rounded-3xl p-6 sm:p-10 border border-[#E8E1D5] bg-[#FAF9F6] shadow-sm transition-all duration-300">
             
             {/* 1. PARA MI ALMA */}
             {activeTab === 'alma' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-center gap-3">
-                    <img src="/assets/drop-caps/cap-L.png" alt="L" className="w-12 h-12 object-contain" />
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A]">
+                  <div className="flex items-start gap-3.5">
+                    <img
+                      src="/assets/drop-caps/cap-L.png"
+                      alt="L"
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                    />
+                    <div className="pt-1">
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
                         {tKey('paths.alma.title')}
                       </h3>
-                      <span className="text-xs text-[#5E7153] font-semibold">
+                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
                         {tKey('paths.alma.subtitle')}
                       </span>
                     </div>
@@ -482,19 +525,21 @@ export default function App() {
               </div>
             )}
 
-            {/* 2. PACTO DE LIBERTAD (5 BATALLAS OCULTAS + PROTOCOLO SILENCIOSO) */}
+            {/* 2. PACTO DE LIBERTAD (CON LETRA CAPITAL P DE PROCREATE) */}
             {activeTab === 'libertad' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-2xl bg-[#2D4523] text-[#D4B373] flex items-center justify-center shrink-0 shadow-xs">
-                      <Shield className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A]">
-                        {freedomCopy.title}
+                  <div className="flex items-start gap-3.5">
+                    <img
+                      src="/assets/drop-caps/cap-P.png"
+                      alt={freedomCopy.dropCapLetter}
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                    />
+                    <div className="pt-1">
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
+                        {freedomCopy.titleAfterCap}
                       </h3>
-                      <span className="text-xs text-[#5E7153] font-semibold">
+                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
                         {freedomCopy.subtitle}
                       </span>
                     </div>
@@ -560,13 +605,17 @@ export default function App() {
             {activeTab === 'intercesion' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-center gap-3">
-                    <img src="/assets/drop-caps/cap-P.png" alt="P" className="w-12 h-12 object-contain" />
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A]">
+                  <div className="flex items-start gap-3.5">
+                    <img
+                      src="/assets/drop-caps/cap-P.png"
+                      alt="P"
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                    />
+                    <div className="pt-1">
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
                         {tKey('paths.intercession.title')}
                       </h3>
-                      <span className="text-xs text-[#5E7153] font-semibold">
+                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
                         {tKey('paths.intercession.subtitle')}
                       </span>
                     </div>
@@ -625,18 +674,22 @@ export default function App() {
             {activeTab === 'pacto' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-center gap-3">
-                    <img src="/assets/drop-caps/cap-A.png" alt="A" className="w-12 h-12 object-contain" />
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A]">
+                  <div className="flex items-start gap-3.5">
+                    <img
+                      src="/assets/drop-caps/cap-A.png"
+                      alt="A"
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                    />
+                    <div className="pt-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
                           {tKey('paths.covenant.title')}
                         </h3>
                         <span className="inline-flex items-center gap-1 text-[10px] font-sans font-bold bg-[#D4B373]/20 text-[#8C6D28] px-2 py-0.5 rounded-full uppercase tracking-wider">
                           <Crown className="w-3 h-3 text-[#D4B373]" /> PRO
                         </span>
                       </div>
-                      <span className="text-xs text-[#5E7153] font-semibold">
+                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
                         {tKey('paths.covenant.subtitle')}
                       </span>
                     </div>
