@@ -18,9 +18,8 @@ import {
   Send,
   HelpCircle,
   Shield,
-  ShieldAlert,
   Users,
-  Wind
+  Compass
 } from 'lucide-react';
 import { useTranslation } from './context/LanguageContext';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
@@ -38,83 +37,135 @@ const FREEDOM_LANDING_COPY = {
   es: {
     tabLabel: 'Pacto de Libertad',
     badgeNew: 'GRATIS',
-    title: 'Pacto de Libertad y Rescate en 90s',
-    subtitle: 'Dominio propio, pureza y acompañamiento anónimo 1 a 1 sin vigilancia invasiva.',
-    desc: 'Para las batallas que nadie ve a las 2:00 AM: impulsos sexuales, pornografía, comparación digital o ira impulsiva. Sin registros con correo ni software espía; solo herramientas reales para cortar el impulso y caminar respaldado.',
-    f1Title: 'Alias Anónimo (Zero-PII):',
-    f1Desc: 'Recibes un alias como Faro-418. Tus notas íntimas jamás salen de tu dispositivo.',
-    f2Title: 'Botón SOS de 90 Segundos:',
-    f2Desc: 'Respiración guiada 4-4-6, audio de rescate y ancla bíblica para frenar la ola química.',
-    f3Title: 'Compañero 1 a 1 por Código:',
-    f3Desc: 'Vincula a un amigo o mentor con un código temporal de 24h para enviar alertas silenciosas de oración.',
-    cardHeader: 'RESCATE SOS · 02:14 AM',
-    cardAlias: 'Alias Activo: Faro-418 · 93% Consistencia',
-    cardQuote: '"El impulso es solo una ola química pasajera de menos de 10 minutos. Respira, deja el teléfono sobre la mesa y recuerda quién eres en Cristo."',
-    cardBtn: 'Avisar a mi compañero ("Ora por mí")',
+    title: 'Pacto de Libertad para Batallas Ocultas',
+    subtitle: 'Pureza, lealtad del corazón y respaldo anónimo 1 a 1 sin vigilancia invasiva.',
+    desc: 'Un santuario silencioso y discreto para las luchas de las que nadie habla en voz alta: pornografía, tentación de infidelidad emocional o digital, ruido compulsivo, insomnio e ira en casa. Sin correos ni software espía; solo herramientas bíblicas prácticas para cortar el impulso.',
+    f1Title: '5 Rutas de Batalla Real:',
+    f1Desc: 'Pureza Visual, Lealtad del Corazón (infidelidad), Ruido Digital, Calma Nocturna y Mansedumbre.',
+    f2Title: 'Protocolo de Acción Inmediata:',
+    f2Desc: '3 pasos silenciosos y prácticos para frenar la ola química en el momento exacto de la tentación.',
+    f3Title: 'Aliado 1 a 1 sin Espionaje:',
+    f3Desc: 'Vincula a un amigo o mentor con un código temporal de 24h para pedir oración en silencio.',
+    cardHeader: 'PACTO DE LIBERTAD · 02:14 AM',
+    cardAlias: 'Alias Anónimo: Faro-418 · 93% Consistencia',
+    cardQuote: '«Sobre toda cosa guardada, guarda tu corazón. Deja el teléfono fuera de la habitación 10 minutos y envía un aviso silencioso de oración sin dar explicaciones.»',
+    cardBtn: 'Pedir oración silenciosa a mi aliado',
   },
   en: {
     tabLabel: 'Freedom Pact',
     badgeNew: 'FREE',
-    title: 'Freedom Pact & 90s Rescue',
-    subtitle: 'Self-control, purity, and anonymous 1-on-1 support without invasive spying.',
-    desc: 'Built for the battles nobody sees at 2:00 AM: sexual urges, pornography, social media comparison, or impulsive anger. No invasive screen monitoring—just practical tools to break the urge and walk supported.',
-    f1Title: 'Anonymous Alias (Zero-PII):',
-    f1Desc: 'Receive an alias like Beacon-418. Your private mirror notes never leave your device.',
-    f2Title: '90-Second SOS Rescue:',
-    f2Desc: 'Guided 4-4-6 breathing, audio rescue, and biblical anchors to ride out the dopamine wave.',
-    f3Title: '1-on-1 Code Partner:',
-    f3Desc: 'Link a trusted friend or mentor via a 24h invite code to send silent prayer alerts.',
-    cardHeader: 'SOS RESCUE · 02:14 AM',
-    cardAlias: 'Active Alias: Beacon-418 · 93% Consistency',
-    cardQuote: '"An urge is only a temporary chemical wave lasting under 10 minutes. Breathe, set your phone down, and remember who you are in Christ."',
-    cardBtn: 'Ping Pact Partner ("Pray for me")',
+    title: 'Freedom Pact for Hidden Battles',
+    subtitle: 'Purity, heart loyalty, and anonymous 1-on-1 backing without invasive spying.',
+    desc: 'A quiet, discreet sanctuary built for the battles few dare to speak aloud: pornography, emotional or digital infidelity temptation, digital noise, midnight anxiety, and anger at home. No emails or screen-spying agents—just practical biblical steps to break the urge.',
+    f1Title: '5 Real Battle Paths:',
+    f1Desc: 'Visual Purity, Heart Loyalty (infidelity), Digital Noise, Night Calm, and Meekness Before Anger.',
+    f2Title: 'Immediate Action Protocol:',
+    f2Desc: '3 quiet, practical steps to ride out the dopamine wave the moment temptation strikes.',
+    f3Title: '1-on-1 Ally Without Spying:',
+    f3Desc: 'Link a trusted friend or mentor via a 24h invite code to send silent prayer requests.',
+    cardHeader: 'FREEDOM PACT · 02:14 AM',
+    cardAlias: 'Anonymous Alias: Beacon-418 · 93% Consistency',
+    cardQuote: '“Above all else, guard your heart. Set your phone outside the bedroom for 10 minutes and send a silent prayer notice—no awkward explanations needed.”',
+    cardBtn: 'Send silent prayer notice to ally',
   },
   pt: {
     tabLabel: 'Pacto de Liberdade',
     badgeNew: 'GRÁTIS',
-    title: 'Pacto de Liberdade e Resgate em 90s',
-    subtitle: 'Domínio próprio, pureza e acompanhamento anônimo 1 a 1 sem vigilância invasiva.',
-    desc: 'Para as batalhas silenciosas das 2:00 AM: impulsos visuais, pornografia, comparação digital ou raiva impulsiva. Sem rastros nem captura de tela.',
-    f1Title: 'Codinome Anônimo (Zero-PII):',
-    f1Desc: 'Você recebe um codinome como Farol-418. Suas notas íntimas nunca saem do seu dispositivo.',
-    f2Title: 'Botão SOS de 90 Segundos:',
-    f2Desc: 'Respiração guiada 4-4-6, áudio de resgate e âncora bíblica imediata.',
-    f3Title: 'Parceiro 1 a 1 por Código:',
-    f3Desc: 'Conecte-se com um amigo ou mentor por código temporário de 24h para alertas silenciosos de oração.',
-    cardHeader: 'RESGATE SOS · 02:14 AM',
-    cardAlias: 'Codinome Ativo: Farol-418 · 93% Consistência',
-    cardQuote: '"O impulso é apenas uma onda química passageira. Respire, deixe o celular na mesa e lembre-se de quem você é em Cristo."',
-    cardBtn: 'Avisar parceiro ("Ore por mim")',
+    title: 'Pacto de Liberdade para Batalhas Ocultas',
+    subtitle: 'Pureza, lealdade do coração e apoio anônimo 1 a 1 sem vigilância invasiva.',
+    desc: 'Um santuário silencioso e discreto para lutas íntimas de que quase ninguém fala: pornografia, tentação de infidelidade emocional ou digital, ruído digital, insônia e raiva em casa. Sem e-mail nem captura de tela.',
+    f1Title: '5 Trilhas de Batalha Real:',
+    f1Desc: 'Pureza Visual, Lealdade do Coração (infidelidade), Ruído Digital, Calma Noturna e Mansidão.',
+    f2Title: 'Protocolo de Ação Imediata:',
+    f2Desc: '3 passos silenciosos e práticos para cortar o impulso no momento exato da tentação.',
+    f3Title: 'Aliado 1 a 1 sem Espionagem:',
+    f3Desc: 'Vincule um amigo ou mentor com código temporário de 24h para pedir oração em silêncio.',
+    cardHeader: 'PACTO DE LIBERDADE · 02:14 AM',
+    cardAlias: 'Apelido Anônimo: Farol-418 · 93% Consistência',
+    cardQuote: '«Sobre tudo o que se deve guardar, guarda o teu coração. Deixe o celular fora do quarto por 10 minutos e envie um aviso silencioso de oração.»',
+    cardBtn: 'Pedir oração silenciosa ao aliado',
   },
   fr: {
     tabLabel: 'Pacte de Liberté',
     badgeNew: 'GRATUIT',
-    title: 'Pacte de Liberté et Secours 90s',
-    subtitle: 'Maîtrise de soi, pureté et accompagnement anonyme 1 à 1 sans surveillance invasive.',
-    desc: 'Pour les combats silencieux à 2h du matin : pulsions, pornographie, comparaison numérique ou colère impulsive. Zéro espionnage d’écran, uniquement des outils concrets pour retrouver la paix.',
-    f1Title: 'Alias Anonyme (Zero-PII) :',
-    f1Desc: 'Recevez un alias comme Phare-418. Vos notes intimes ne quittent jamais votre appareil.',
-    f2Title: 'Bouton SOS 90 Secondes :',
-    f2Desc: 'Respiration guidée 4-4-6, audio de secours et ancre biblique immédiate.',
-    f3Title: 'Partenaire 1 à 1 par Code :',
-    f3Desc: 'Reliez un ami ou mentor via un code de 24h pour envoyer des alertes de prière discrètes.',
-    cardHeader: 'SECOURS SOS · 02:14 AM',
-    cardAlias: 'Alias Actif : Phare-418 · 93% Constance',
-    cardQuote: '"La pulsion n’est qu’une vague chimique passagère. Respirez, posez votre téléphone et souvenez-vous de qui vous êtes en Christ."',
-    cardBtn: 'Alerter mon partenaire ("Prie pour moi")',
+    title: 'Pacte de Liberté pour les Combats Cachés',
+    subtitle: 'Pureté, loyauté du cœur et soutien anonyme 1 à 1 sans surveillance intrusive.',
+    desc: 'Un sanctuaire silencieux et discret pour les batailles intérieures dont on ose rarement parler : pornographie, tentation d’infidélité émotionnelle ou numérique, bruit numérique, insomnie et colère. Zéro espionnage d’écran.',
+    f1Title: '5 Parcours de Combat Réel :',
+    f1Desc: 'Pureté Visuelle, Loyauté du Cœur (infidélité), Bruit Numérique, Calme Nocturne et Douceur.',
+    f2Title: 'Protocole d’Action Immédiate :',
+    f2Desc: '3 gestes silencieux et concrets pour briser l’impulsion dès qu’elle surgit.',
+    f3Title: 'Allié 1 à 1 sans Espionnage :',
+    f3Desc: 'Reliez un ami ou mentor via un code de 24h pour demander la prière en silence.',
+    cardHeader: 'PACTE DE LIBERTÉ · 02:14 AM',
+    cardAlias: 'Alias Anonyme : Phare-418 · 93% Constance',
+    cardQuote: '« Garde ton cœur plus que toute autre chose. Pose ton téléphone hors de la chambre pendant 10 minutes et envoie un signal silencieux de prière. »',
+    cardBtn: 'Demander la prière en silence',
   },
+};
+
+const EXTRA_FREEDOM_FAQS: Record<'es' | 'en' | 'pt' | 'fr', FaqItem[]> = {
+  es: [
+    {
+      q: '¿Qué es «Pacto de Libertad» y qué batallas ocultas aborda?',
+      verse: '1 Corintios 10:13 · Proverbios 4:23 — «Sobre toda cosa guardada, guarda tu corazón»',
+      a: 'Es un espacio discreto, silencioso y libre de culpa diseñado para las luchas íntimas que rara vez se hablan en voz alta: Pureza Visual y Sexual (pornografía), Lealtad e Integridad del Corazón (frenar chats secretos, vínculos emocionales ocultos o tentación de infidelidad), Ruido Digital, Calma Nocturna e Insomnio, y Mansedumbre antes de la Ira. Incluye un protocolo de acción inmediata de 3 pasos, rutas guiadas de 7 días y registro de consistencia sin culpa.',
+    },
+    {
+      q: '¿Cómo funciona el Aliado de Pacto (1 a 1) sin vigilancia invasiva?',
+      verse: 'Gálatas 6:2 · Eclesiastés 4:9-10 — «Mejores son dos que uno... porque si cayeren, el uno levantará a su compañero»',
+      a: 'A diferencia de aplicaciones costosas que toman capturas de tu pantalla o instalan agentes espía, God Got You parte de la gracia y la confianza: vinculas a un amigo o mentor mediante un alias anónimo y un código temporal de 24 horas. Nadie lee tus notas ni ve tu pantalla; solo puedes enviar un aviso silencioso de oración cuando atraviesas un momento difícil y desvincular el pacto en un toque.',
+    },
+  ],
+  en: [
+    {
+      q: 'What is «Freedom Pact» and which hidden battles does it address?',
+      verse: '1 Corinthians 10:13 · Proverbs 4:23 — “Above all else, guard your heart”',
+      a: 'It is a discreet, quiet, shame-free sanctuary built for the hidden struggles rarely discussed aloud: Visual & Sexual Purity (pornography), Heart Loyalty & Marriage Integrity (stopping secret chats, hidden emotional bonds, or infidelity temptation), Digital Noise, Night Calm, and Meekness Before Anger. It includes a 3-step immediate action protocol, 7-day guided paths, and shame-free consistency tracking.',
+    },
+    {
+      q: 'How does the 1-on-1 Pact Ally work without invasive surveillance?',
+      verse: 'Galatians 6:2 · Ecclesiastes 4:9-10 — “Two are better than one... if either falls, one can help the other up”',
+      a: 'Unlike costly apps that take screenshots of your phone or install monitoring agents, God Got You is rooted in trust and grace: you link a trusted friend or mentor using anonymous aliases and a 24-hour invite code. Nobody reads your private notes or spies on your screen—you simply send a silent prayer notice when facing a tough moment and can unlink anytime.',
+    },
+  ],
+  pt: [
+    {
+      q: 'O que é o «Pacto de Liberdade» e quais batalhas ocultas ele aborda?',
+      verse: '1 Coríntios 10:13 · Provérbios 4:23 — «Sobre tudo o que se deve guardar, guarda o teu coração»',
+      a: 'É um espaço discreto, silencioso e livre de culpa criado para lutas íntimas raramente faladas em voz alta: Pureza Visual e Sexual (pornografia), Lealdade e Integridade do Coração (frear conversas secretas, vínculos emocionais ocultos ou tentação de infidelidade), Ruído Digital, Calma Noturna e Mansidão antes da Ira. Inclui protocolo de ação imediata em 3 passos, trilhas de 7 dias e consistência sem culpa.',
+    },
+    {
+      q: 'Como funciona o Aliado de Pacto (1 a 1) sem vigilância invasiva?',
+      verse: 'Gálatas 6:2 · Eclesiastes 4:9-10 — «Melhor é serem dois do que um... se um cair, o outro levanta o seu companheiro»',
+      a: 'Diferente de aplicativos caros que tiram capturas da sua tela, o God Got You parte da confiança e da graça: você vincula um amigo ou mentor usando apelidos anônimos e um código temporário de 24h. Ninguém lê suas notas nem espiona seu celular; você apenas envia um aviso silencioso de oração quando precisa de cobertura.',
+    },
+  ],
+  fr: [
+    {
+      q: 'Qu’est-ce que le « Pacte de Liberté » et quels combats cachés aborde-t-il ?',
+      verse: '1 Corinthiens 10:13 · Proverbes 4:23 — « Garde ton cœur plus que toute autre chose »',
+      a: 'C’est un espace discret, silencieux et sans culpabilité conçu pour les batailles intérieures dont on ose rarement parler : Pureté Visuelle et Sexuelle (pornographie), Loyauté et Intégrité du Cœur (freiner les discussions secrètes, liens émotionnels cachés ou tentations d’infidélité), Bruit Numérique, Calme Nocturne et Douceur avant la Colère. Il comprend un protocole d’action immédiate en 3 étapes et des parcours de 7 jours.',
+    },
+    {
+      q: 'Comment fonctionne l’Allié de Pacte (1 à 1) sans surveillance intrusive ?',
+      verse: 'Galates 6:2 · Ecclésiaste 4:9-10 — « Deux valent mieux qu’un... car s’ils tombent, l’un relève son compagnon »',
+      a: 'Contrairement aux applications coûteuses qui font des captures d’écran de votre téléphone, God Got You repose sur la confiance et la grâce : vous reliez un ami ou mentor via des alias anonymes et un code de 24h. Personne ne lit vos notes ni n’espionne votre écran : vous envoyez simplement une demande silencieuse de prière en cas de combat.',
+    },
+  ],
 };
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'alma' | 'libertad' | 'intercesion' | 'pacto'>('alma');
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [legalModalOpen, setLegalModalOpen] = useState<boolean>(false);
   const [legalInitialTab, setLegalInitialTab] = useState<'privacy' | 'terms' | 'refunds'>('privacy');
   
   const { t, locale, tKey } = useTranslation();
 
-  const targetAppUrl = `https://godgotyou.app?lang=${locale}`;
-  const freedomCopy = FREEDOM_LANDING_COPY[locale as keyof typeof FREEDOM_LANDING_COPY] || FREEDOM_LANDING_COPY.es;
+  const safeLocale = (locale === 'en' || locale === 'pt' || locale === 'fr') ? locale : 'es';
+  const targetAppUrl = `https://godgotyou.app?lang=${safeLocale}`;
+  const freedomCopy = FREEDOM_LANDING_COPY[safeLocale];
 
   const openLegal = (tab: 'privacy' | 'terms' | 'refunds') => {
     setLegalInitialTab(tab);
@@ -125,7 +176,11 @@ export default function App() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const faqList: FaqItem[] = (t?.faq?.items as FaqItem[]) || [];
+  const baseFaqList: FaqItem[] = (t?.faq?.items as FaqItem[]) || [];
+  const faqList: FaqItem[] = [
+    ...EXTRA_FREEDOM_FAQS[safeLocale],
+    ...baseFaqList,
+  ];
 
   return (
     <div className="min-h-screen bg-[#FAF8F5] text-[#1A1A1A] selection:bg-[#D4B373]/30 selection:text-[#2D4523] flex flex-col justify-between relative font-sans">
@@ -220,7 +275,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* Mockup Editorial de la App (Bordes limpios sin corte inferior) */}
+        {/* Mockup Editorial de la App */}
         <div className="max-w-4xl mx-auto mt-12 sm:mt-16 relative">
           <div className="rounded-3xl p-3 sm:p-5 bg-white border border-[#EAE5DC] shadow-[0_20px_60px_rgba(0,0,0,0.07)] relative overflow-hidden transition-all duration-300 hover:shadow-[0_25px_70px_rgba(45,69,35,0.12)]">
             <div className="rounded-2xl p-6 sm:p-10 border border-[#E8E1D5] bg-[#FAF9F6] text-left space-y-6 relative">
@@ -427,7 +482,7 @@ export default function App() {
               </div>
             )}
 
-            {/* 2. PACTO DE LIBERTAD (NUEVO MÓDULO ANÓNIMO Y SOS) */}
+            {/* 2. PACTO DE LIBERTAD (5 BATALLAS OCULTAS + PROTOCOLO SILENCIOSO) */}
             {activeTab === 'libertad' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
@@ -463,16 +518,16 @@ export default function App() {
                   </ul>
                 </div>
 
-                {/* Tarjeta Vista Previa Modo Nocturno SOS */}
+                {/* Tarjeta Vista Previa Modo Nocturno Discreto */}
                 <div className="rounded-3xl p-6 bg-[#121619] border-2 border-[#D4B373]/40 text-[#F0EBE1] shadow-2xl max-w-sm mx-auto space-y-5 text-left">
                   <div className="flex items-center justify-between border-b border-white/10 pb-3.5">
                     <div className="flex items-center gap-2">
-                      <ShieldAlert className="w-4 h-4 text-amber-400" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-amber-400">
+                      <Compass className="w-4 h-4 text-[#D4B373]" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-[#D4B373]">
                         {freedomCopy.cardHeader}
                       </span>
                     </div>
-                    <Wind className="w-4 h-4 text-[#D4B373]" />
+                    <Lock className="w-4 h-4 text-emerald-400" />
                   </div>
 
                   <div className="space-y-1">
@@ -566,7 +621,7 @@ export default function App() {
               </div>
             )}
 
-            {/* 4. ESPACIO COMPARTIDO */}
+            {/* 4. PACTO DE PAZ (PRO) */}
             {activeTab === 'pacto' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
@@ -689,7 +744,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. DEFENSE INSTITUCIONAL Y DOCTRINAL (FAQS) */}
+      {/* 4. DEFENSA INSTITUCIONAL Y DOCTRINAL (FAQS) */}
       <section id="faq" className="py-16 sm:py-24 px-4 sm:px-6 bg-white border-t border-[#EAE5DC]">
         <div className="max-w-4xl mx-auto space-y-12">
           
