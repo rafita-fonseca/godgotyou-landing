@@ -13,11 +13,9 @@ import {
   Mail,
   Award,
   Scroll,
-  Crown,
   Share2,
   Send,
   HelpCircle,
-  Shield,
   Users,
   Compass
 } from 'lucide-react';
@@ -36,94 +34,262 @@ interface FaqItem {
 const PATHS_HEADER_COPY = {
   es: {
     title: 'Caminos de gracia para encontrar refugio en Su verdad',
-    subtitle: 'Para tu desahogo íntimo, para vencer batallas ocultas, para interceder por quienes amas y para sanar en paz el hogar.',
+    subtitle: 'Para llevar cautivos tus pensamientos, vencer batallas ocultas, interceder por quienes amas y sanar en paz el hogar.',
   },
   en: {
     title: 'Paths of grace to find refuge in His truth',
-    subtitle: 'For personal release, overcoming hidden battles, interceding for loved ones, and restoring peace at home.',
+    subtitle: 'To take every thought captive, overcome hidden battles, intercede for loved ones, and restore peace at home.',
   },
   pt: {
     title: 'Caminhos de graça para encontrar refúgio na Sua verdade',
-    subtitle: 'Para seu desabafo íntimo, para vencer batalhas ocultas, para interceder por quem você ama e para restaurar a paz no lar.',
+    subtitle: 'Para levar cativo todo pensamento, vencer batalhas ocultas, interceder por quem você ama e restaurar a paz no lar.',
   },
   fr: {
     title: 'Chemins de grâce pour trouver refuge dans Sa vérité',
-    subtitle: 'Pour votre dépôt intime, vaincre les combats cachés, intercéder pour vos proches et apaiser le foyer.',
+    subtitle: 'Pour amener toute pensée captive, vaincre les combats cachés, intercéder pour vos proches et apaiser le foyer.',
   },
 };
 
-const FREEDOM_LANDING_COPY = {
+const PILLARS_SPIRITUAL_COPY = {
   es: {
-    tabLabel: 'Pacto de Libertad',
-    badgeNew: 'GRATIS',
-    dropCapLetter: 'P',
-    titleAfterCap: 'acto de Libertad para Batallas Ocultas',
-    subtitle: 'Pureza, lealtad del corazón y respaldo anónimo 1 a 1 sin vigilancia invasiva.',
-    desc: 'Un santuario silencioso y discreto para las luchas de las que nadie habla en voz alta: pornografía, tentación de infidelidad emocional o digital, ruido compulsivo, insomnio e ira en casa. Sin correos ni software espía; solo herramientas bíblicas prácticas para cortar el impulso.',
-    f1Title: '5 Rutas de Batalla Real:',
-    f1Desc: 'Pureza Visual, Lealtad del Corazón (infidelidad), Ruido Digital, Calma Nocturna y Mansedumbre.',
-    f2Title: 'Protocolo de Acción Inmediata:',
-    f2Desc: '3 pasos silenciosos y prácticos para frenar la ola química en el momento exacto de la tentación.',
-    f3Title: 'Aliado 1 a 1 sin Espionaje:',
-    f3Desc: 'Vincula a un amigo o mentor con un código temporal de 24h para pedir oración en silencio.',
-    cardHeader: 'PACTO DE LIBERTAD · 02:14 AM',
-    cardAlias: 'Alias Anónimo: Faro-418 · 93% Consistencia',
-    cardQuote: '«Sobre toda cosa guardada, guarda tu corazón. Deja el teléfono fuera de la habitación 10 minutos y envía un aviso silencioso de oración sin dar explicaciones.»',
-    cardBtn: 'Pedir oración silenciosa a mi aliado',
+    alma: {
+      tab: 'Para mi alma',
+      cap: '/assets/drop-caps/cap-L.png',
+      capAlt: 'L',
+      titleAfterCap: 'a quietud que tu alma necesita',
+      scriptureBadge: '2 Corintios 10:5 · «Llevando cautivo todo pensamiento a la obediencia a Cristo»',
+      desc: 'Cuando la mente no se detiene a las 2:00 AM y el temor intenta gobernar tu pecho, vacía aquí lo que te pesa con total honestidad. La Palabra de Dios responde a la raíz de tu pensamiento para desarmar la mentira y devolverle descanso a tu espíritu.',
+      f1Title: 'Palabra al corazón:',
+      f1Desc: 'Un mensaje pastoral anclado en 2 Corintios 10:5 que desmonta la culpa y te recuerda que no cargas el mundo solo.',
+      f2Title: 'La Promesa Viva:',
+      f2Desc: 'Versículos bíblicos exactos (Mateo 11:28, Filipenses 4:7) para reemplazar la hipervigilancia por Su paz.',
+      f3Title: 'Oración de reposo y Piedras de Memoria:',
+      f3Desc: 'Plegaria en primera persona para dormir en paz y guardar cada respuesta de Dios en tu sendero de fidelidad.',
+    },
+    libertad: {
+      tab: 'Pacto de Libertad',
+      cap: '/assets/drop-caps/cap-P.png',
+      capAlt: 'P',
+      titleAfterCap: 'acto de Libertad para batallas ocultas',
+      scriptureBadge: '1 Corintios 10:13 · Proverbios 4:23 — «Sobre toda cosa guardada, guarda tu corazón»',
+      desc: 'Dios siempre abre una salida en medio de la tentación. Un santuario silencioso, discreto y libre de condenación (Romanos 8:1) para vencer las luchas de las que casi nadie habla en voz alta: pornografía, tentación de infidelidad emocional o digital, ruido compulsivo, insomnio e ira en casa.',
+      f1Title: '5 rutas de integridad real:',
+      f1Desc: 'Pureza Visual, Lealtad del Corazón (infidelidad), Ruido Digital, Calma Nocturna y Mansedumbre antes de la Ira.',
+      f2Title: 'Protocolo bíblico inmediato:',
+      f2Desc: '3 pasos silenciosos para cortar el impulso en el momento exacto y caminar un recorrido guiado de 7 días sin culpa.',
+      f3Title: 'Aliado de pacto 1 a 1 (Gálatas 6:2):',
+      f3Desc: 'Camina respaldado por un amigo o mentor mediante un alias anónimo y avisos silenciosos de oración, sin espionaje de pantalla.',
+      cardHeader: 'PACTO DE LIBERTAD · 02:14 AM',
+      cardAlias: 'Alias Anónimo: Faro-418 · 93% Consistencia',
+      cardQuote: '«Sobre toda cosa guardada, guarda tu corazón. Deja el teléfono fuera de la habitación 10 minutos y envía un aviso silencioso de oración sin dar explicaciones.»',
+      cardBtn: 'Pedir oración silenciosa a mi aliado',
+    },
+    intercesion: {
+      tab: 'Interceder por alguien',
+      cap: '/assets/drop-caps/cap-P.png',
+      capAlt: 'P',
+      titleAfterCap: 'onerse en la brecha por quienes amas',
+      scriptureBadge: 'Gálatas 6:2 · Santiago 5:16 — «Sobrellevad los unos las cargas de los otros»',
+      desc: 'Cuando un familiar o amigo atraviesa enfermedad, duelo o incertidumbre y no sabes qué palabras decirle, presenta su nombre ante el Padre. El santuario prepara una carta pastoral llena de ternura y promesas bíblicas lista para abrazar su corazón.',
+      c1Title: 'Carta pastoral personalizada:',
+      c1Desc: 'Redactada directamente en segunda persona para el corazón de quien sufre, con oración de cobertura incluida.',
+      c2Title: 'Lista para enviar por WhatsApp o Historias:',
+      c2Desc: 'Comparte un recordatorio sereno de que no está solo y de que alguien está intercediendo por su vida hoy.',
+    },
+    pacto: {
+      tab: 'Pacto de paz',
+      cap: '/assets/drop-caps/cap-A.png',
+      capAlt: 'A',
+      titleAfterCap: 'cuerdo sagrado de paz y perdón',
+      scriptureBadge: 'Mateo 5:9 · Mateo 18:19 — «Bienaventurados los pacificadores»',
+      desc: 'Cuando el cansancio o una discusión levantan un muro en el matrimonio, la familia o una amistad, detengan los mensajes apresurados. Ambos comparten un mismo teléfono, se escuchan sin interrupciones y permiten que la Escritura traiga entendimiento y reconciliación.',
+      f1Title: 'Escucha sin interrupciones:',
+      f1Desc: 'Cada persona expresa su sentir con honestidad y respeto antes de buscar tener la razón.',
+      f2Title: 'Luz bíblica para ambos corazones:',
+      f2Desc: 'Versículos que desarman el orgullo (Efesios 4:26, Colosenses 3:13) y orientan un acuerdo práctico de paz.',
+      f3Title: 'Oración de unidad:',
+      f3Desc: 'Una plegaria compartida para cerrar la herida antes de que se ponga el sol y volver a caminar juntos.',
+    },
   },
   en: {
-    tabLabel: 'Freedom Pact',
-    badgeNew: 'FREE',
-    dropCapLetter: 'F',
-    titleAfterCap: 'reedom Pact for Hidden Battles',
-    subtitle: 'Purity, heart loyalty, and anonymous 1-on-1 backing without invasive spying.',
-    desc: 'A quiet, discreet sanctuary built for the battles few dare to speak aloud: pornography, emotional or digital infidelity temptation, digital noise, midnight anxiety, and anger at home. No emails or screen-spying agents—just practical biblical steps to break the urge.',
-    f1Title: '5 Real Battle Paths:',
-    f1Desc: 'Visual Purity, Heart Loyalty (infidelity), Digital Noise, Night Calm, and Meekness Before Anger.',
-    f2Title: 'Immediate Action Protocol:',
-    f2Desc: '3 quiet, practical steps to ride out the dopamine wave the moment temptation strikes.',
-    f3Title: '1-on-1 Ally Without Spying:',
-    f3Desc: 'Link a trusted friend or mentor via a 24h invite code to send silent prayer requests.',
-    cardHeader: 'FREEDOM PACT · 02:14 AM',
-    cardAlias: 'Anonymous Alias: Beacon-418 · 93% Consistency',
-    cardQuote: '“Above all else, guard your heart. Set your phone outside the bedroom for 10 minutes and send a silent prayer notice—no awkward explanations needed.”',
-    cardBtn: 'Send silent prayer notice to ally',
+    alma: {
+      tab: 'For My Soul',
+      cap: '/assets/drop-caps/cap-T.png',
+      capAlt: 'T',
+      titleAfterCap: 'he stillness your soul longs for',
+      scriptureBadge: '2 Corinthians 10:5 · “Taking every thought captive to make it obedient to Christ”',
+      desc: 'When your mind refuses to quiet down at 2:00 AM and fear weighs heavy on your chest, lay down every anxious thought honestly. God’s Word speaks directly to the root of your burden to disarm worry and restore rest to your spirit.',
+      f1Title: 'A Word to Your Heart:',
+      f1Desc: 'Pastoral encouragement anchored in 2 Corinthians 10:5 that lifts shame and reminds you that you never carry the world alone.',
+      f2Title: 'The Living Promise:',
+      f2Desc: 'Exact Scripture verses (Matthew 11:28, Philippians 4:7) to replace hypervigilance with His peace.',
+      f3Title: 'Prayer of Rest & Memorial Stones:',
+      f3Desc: 'A first-person prayer for peaceful sleep and a sacred record of God’s faithfulness along your journey.',
+    },
+    libertad: {
+      tab: 'Freedom Pact',
+      cap: '/assets/drop-caps/cap-P.png',
+      capAlt: 'F',
+      titleAfterCap: 'reedom Pact for hidden battles',
+      scriptureBadge: '1 Corinthians 10:13 · Proverbs 4:23 — “Above all else, guard your heart”',
+      desc: 'God always provides a way out in the hour of temptation. A quiet, discreet, condemnation-free sanctuary (Romans 8:1) for the hidden struggles rarely spoken aloud: pornography, emotional or digital infidelity temptation, digital noise, insomnia, and anger at home.',
+      f1Title: '5 paths of real integrity:',
+      f1Desc: 'Visual Purity, Heart Loyalty (infidelity), Digital Noise, Night Calm, and Meekness Before Anger.',
+      f2Title: 'Immediate biblical protocol:',
+      f2Desc: '3 quiet steps to break the urge in the moment of temptation, paired with a 7-day grace-filled path.',
+      f3Title: '1-on-1 Pact Ally (Galatians 6:2):',
+      f3Desc: 'Walk backed by a trusted friend or mentor via an anonymous alias and silent prayer alerts—zero screen spying.',
+      cardHeader: 'FREEDOM PACT · 02:14 AM',
+      cardAlias: 'Anonymous Alias: Beacon-418 · 93% Consistency',
+      cardQuote: '“Above all else, guard your heart. Set your phone outside the bedroom for 10 minutes and send a silent prayer notice—no awkward explanations needed.”',
+      cardBtn: 'Send silent prayer notice to ally',
+    },
+    intercesion: {
+      tab: 'Intercede for Someone',
+      cap: '/assets/drop-caps/cap-S.png',
+      capAlt: 'S',
+      titleAfterCap: 'tanding in the gap for those you love',
+      scriptureBadge: 'Galatians 6:2 · James 5:16 — “Carry each other’s burdens”',
+      desc: 'When a loved one faces illness, grief, or deep uncertainty and you don’t know what to say, lift their name before the Father. The sanctuary crafts a tender pastoral letter rooted in Scripture to comfort their heart.',
+      c1Title: 'Personal pastoral letter:',
+      c1Desc: 'Written directly to the heart of the person hurting, complete with comforting verses and prayer.',
+      c2Title: 'Ready to share on WhatsApp or Stories:',
+      c2Desc: 'Send a quiet reminder that they are not forgotten and that someone is interceding for them today.',
+    },
+    pacto: {
+      tab: 'Peace Pact',
+      cap: '/assets/drop-caps/cap-A.png',
+      capAlt: 'A',
+      titleAfterCap: 'sacred covenant of peace and forgiveness',
+      scriptureBadge: 'Matthew 5:9 · Matthew 18:19 — “Blessed are the peacemakers”',
+      desc: 'When fatigue or conflict builds a wall in marriage, family, or friendship, pause hasty messages. Both share one phone, listen without interruption, and let Scripture illuminate both hearts toward reconciliation.',
+      f1Title: 'Uninterrupted listening:',
+      f1Desc: 'Each person expresses their heart honestly and gently before trying to win an argument.',
+      f2Title: 'Scripture light for both hearts:',
+      f2Desc: 'Verses that disarm pride (Ephesians 4:26, Colossians 3:13) and guide a practical mutual agreement.',
+      f3Title: 'Prayer of unity:',
+      f3Desc: 'A shared prayer to heal the rift before the sun goes down and walk forward together.',
+    },
   },
   pt: {
-    tabLabel: 'Pacto de Liberdade',
-    badgeNew: 'GRÁTIS',
-    dropCapLetter: 'P',
-    titleAfterCap: 'acto de Liberdade para Batalhas Ocultas',
-    subtitle: 'Pureza, lealdade do coração e apoio anônimo 1 a 1 sem vigilância invasiva.',
-    desc: 'Um santuário silencioso e discreto para lutas íntimas de que quase ninguém fala: pornografia, tentação de infidelidade emocional ou digital, ruído digital, insônia e raiva em casa. Sem e-mail nem captura de tela.',
-    f1Title: '5 Trilhas de Batalha Real:',
-    f1Desc: 'Pureza Visual, Lealdade do Coração (infidelidade), Ruído Digital, Calma Noturna e Mansidão.',
-    f2Title: 'Protocolo de Ação Imediata:',
-    f2Desc: '3 passos silenciosos e práticos para cortar o impulso no momento exato da tentação.',
-    f3Title: 'Aliado 1 a 1 sem Espionagem:',
-    f3Desc: 'Vincule um amigo ou mentor com código temporário de 24h para pedir oração em silêncio.',
-    cardHeader: 'PACTO DE LIBERDADE · 02:14 AM',
-    cardAlias: 'Apelido Anônimo: Farol-418 · 93% Consistência',
-    cardQuote: '«Sobre tudo o que se deve guardar, guarda o teu coração. Deixe o celular fora do quarto por 10 minutos e envie um aviso silencioso de oração.»',
-    cardBtn: 'Pedir oração silenciosa ao aliado',
+    alma: {
+      tab: 'Para Minha Alma',
+      cap: '/assets/drop-caps/cap-A.png',
+      capAlt: 'A',
+      titleAfterCap: 'quietude que a sua alma precisa',
+      scriptureBadge: '2 Coríntios 10:5 · «Levando cativo todo pensamento à obediência de Cristo»',
+      desc: 'Quando a mente não desacelera às 2h da manhã e o medo aperta o peito, entregue aqui o que pesa com total sinceridade. A Palavra de Deus responde à raiz do seu pensamento para desarmar a ansiedade e devolver descanso ao seu espírito.',
+      f1Title: 'Palavra ao coração:',
+      f1Desc: 'Uma reflexão pastoral ancorada em 2 Coríntios 10:5 que remove a culpa e lembra que você não carrega o mundo sozinho.',
+      f2Title: 'A Promessa Viva:',
+      f2Desc: 'Versículos bíblicos exatos (Mateus 11:28, Filipenses 4:7) para substituir a hipervigilância pela Sua paz.',
+      f3Title: 'Oração de descanso e Pedras de Memória:',
+      f3Desc: 'Oração em primeira pessoa para dormir em paz e registrar cada livramento de Deus no seu caminho.',
+    },
+    libertad: {
+      tab: 'Pacto de Liberdade',
+      cap: '/assets/drop-caps/cap-P.png',
+      capAlt: 'P',
+      titleAfterCap: 'acto de Liberdade para batalhas ocultas',
+      scriptureBadge: '1 Coríntios 10:13 · Provérbios 4:23 — «Sobre tudo o que se deve guardar, guarda o teu coração»',
+      desc: 'Deus sempre prepara um escape na hora da tentação. Um santuário silencioso, discreto e livre de condenação (Romanos 8:1) para vencer lutas íntimas de que quase ninguém fala: pornografia, tentação de infidelidade emocional ou digital, ruído digital, insônia e raiva em casa.',
+      f1Title: '5 trilhas de integridade real:',
+      f1Desc: 'Pureza Visual, Lealdade do Coração (infidelidade), Ruído Digital, Calma Noturna e Mansidão antes da Ira.',
+      f2Title: 'Protocolo bíblico imediato:',
+      f2Desc: '3 passos silenciosos para cortar o impulso no momento da tentação e uma jornada guiada de 7 dias sem culpa.',
+      f3Title: 'Aliado de pacto 1 a 1 (Gálatas 6:2):',
+      f3Desc: 'Caminhe apoiado por um amigo ou mentor com apelido anônimo e avisos silenciosos de oração, sem espionagem.',
+      cardHeader: 'PACTO DE LIBERDADE · 02:14 AM',
+      cardAlias: 'Apelido Anônimo: Farol-418 · 93% Consistência',
+      cardQuote: '«Sobre tudo o que se deve guardar, guarda o teu coração. Deixe o celular fora do quarto por 10 minutos e envie um aviso silencioso de oração.»',
+      cardBtn: 'Pedir oração silenciosa ao aliado',
+    },
+    intercesion: {
+      tab: 'Interceder por Alguém',
+      cap: '/assets/drop-caps/cap-C.png',
+      capAlt: 'C',
+      titleAfterCap: 'olocar-se na brecha por quem você ama',
+      scriptureBadge: 'Gálatas 6:2 · Tiago 5:16 — «Levai as cargas uns dos outros»',
+      desc: 'Quando alguém querido enfrenta doença, luto ou incerteza e você não sabe o que dizer, apresente o nome dessa pessoa ao Pai. O santuário prepara uma carta pastoral cheia de ternura e promessas bíblicas para consolar seu coração.',
+      c1Title: 'Carta pastoral personalizada:',
+      c1Desc: 'Escrita diretamente para o coração de quem sofre, com versículos de consolo e oração de cobertura.',
+      c2Title: 'Pronta para enviar no WhatsApp ou Status:',
+      c2Desc: 'Compartilhe um lembrete sereno de que ela não está sozinha e de que alguém está intercedendo por sua vida hoje.',
+    },
+    pacto: {
+      tab: 'Pacto de Paz',
+      cap: '/assets/drop-caps/cap-A.png',
+      capAlt: 'A',
+      titleAfterCap: 'cordo sagrado de paz e perdão',
+      scriptureBadge: 'Mateus 5:9 · Mateus 18:19 — «Bem-aventurados os pacificadores»',
+      desc: 'Quando o cansaço ou uma discussão levantam um muro no casamento, na família ou na amizade, interrompam mensagens precipitadas. Ambos compartilham um único celular, ouvem-se sem interrupções e deixam a Escritura trazer reconciliação.',
+      f1Title: 'Escuta sem interrupções:',
+      f1Desc: 'Cada pessoa expressa seu sentir com honestidade e respeito antes de tentar ter razão.',
+      f2Title: 'Luz bíblica para ambos os corações:',
+      f2Desc: 'Versículos que desarmam o orgulho (Efésios 4:26, Colossenses 3:13) e orientam um acordo mútuo de paz.',
+      f3Title: 'Oração de unidade:',
+      f3Desc: 'Uma prece compartilhada para curar a ferida antes do pôr do sol e voltar a caminhar juntos.',
+    },
   },
   fr: {
-    tabLabel: 'Pacte de Liberté',
-    badgeNew: 'GRATUIT',
-    dropCapLetter: 'P',
-    titleAfterCap: 'acte de Liberté pour les Combats Cachés',
-    subtitle: 'Pureté, loyauté du cœur et soutien anonyme 1 à 1 sans surveillance intrusive.',
-    desc: 'Un sanctuaire silencieux et discret pour les batailles intérieures dont on ose rarement parler : pornographie, tentation d’infidélité émotionnelle ou numérique, bruit numérique, insomnie et colère. Zéro espionnage d’écran.',
-    f1Title: '5 Parcours de Combat Réel :',
-    f1Desc: 'Pureté Visuelle, Loyauté du Cœur (infidélité), Bruit Numérique, Calme Nocturne et Douceur.',
-    f2Title: 'Protocole d’Action Immédiate :',
-    f2Desc: '3 gestes silencieux et concrets pour briser l’impulsion dès qu’elle surgit.',
-    f3Title: 'Allié 1 à 1 sans Espionnage :',
-    f3Desc: 'Reliez un ami ou mentor via un code de 24h pour demander la prière en silence.',
-    cardHeader: 'PACTE DE LIBERTÉ · 02:14 AM',
-    cardAlias: 'Alias Anonyme : Phare-418 · 93% Constance',
-    cardQuote: '« Garde ton cœur plus que toute autre chose. Pose ton téléphone hors de la chambre pendant 10 minutes et envoie un signal silencieux de prière. »',
-    cardBtn: 'Demander la prière en silence',
+    alma: {
+      tab: 'Pour Mon Âme',
+      cap: '/assets/drop-caps/cap-L.png',
+      capAlt: 'L',
+      titleAfterCap: 'a quiétude dont votre âme a besoin',
+      scriptureBadge: '2 Corinthiens 10:5 · « Amenant toute pensée captive à l’obéissance de Christ »',
+      desc: 'Lorsque l’esprit refuse de s’apaiser à 2h du matin et que la crainte oppresse votre cœur, déposez ici ce qui vous pèse en toute vérité. La Parole de Dieu répond à la racine de vos pensées pour désarmer l’inquiétude et rendre le repos à votre âme.',
+      f1Title: 'Parole au cœur :',
+      f1Desc: 'Un message pastoral ancré dans 2 Corinthiens 10:5 qui ôte la culpabilité et rappelle que vous ne portez pas le monde seul.',
+      f2Title: 'La Promesse Vivante :',
+      f2Desc: 'Des versets bibliques précis (Matthieu 11:28, Philippiens 4:7) pour remplacer l’hypervigilance par Sa paix.',
+      f3Title: 'Prière de repos et Pierres de Mémoire :',
+      f3Desc: 'Une prière personnelle pour dormir en paix et conserver chaque témoignage de Sa fidélité.',
+    },
+    libertad: {
+      tab: 'Pacte de Liberté',
+      cap: '/assets/drop-caps/cap-P.png',
+      capAlt: 'P',
+      titleAfterCap: 'acte de Liberté pour les combats cachés',
+      scriptureBadge: '1 Corinthiens 10:13 · Proverbes 4:23 — « Garde ton cœur plus que toute autre chose »',
+      desc: 'Dieu prépare toujours un moyen de sortir de la tentation. Un sanctuaire silencieux, discret et sans condamnation (Romains 8:1) pour vaincre les luttes intérieures dont on ose rarement parler : pornographie, tentation d’infidélité émotionnelle ou numérique, bruit numérique, insomnie et colère.',
+      f1Title: '5 parcours d’intégrité réelle :',
+      f1Desc: 'Pureté Visuelle, Loyauté du Cœur (infidélité), Bruit Numérique, Calme Nocturne et Douceur avant la Colère.',
+      f2Title: 'Protocole biblique immédiat :',
+      f2Desc: '3 gestes silencieux pour briser l’impulsion dès qu’elle surgit, accompagnés d’un parcours de 7 jours sans culpabilité.',
+      f3Title: 'Allié de pacte 1 à 1 (Galates 6:2) :',
+      f3Desc: 'Avancez soutenu par un ami ou mentor via un alias anonyme et des demandes silencieuses de prière, sans espionnage.',
+      cardHeader: 'PACTE DE LIBERTÉ · 02:14 AM',
+      cardAlias: 'Alias Anonyme : Phare-418 · 93% Constance',
+      cardQuote: '« Garde ton cœur plus que toute autre chose. Pose ton téléphone hors de la chambre pendant 10 minutes et envoie un signal silencieux de prière. »',
+      cardBtn: 'Demander la prière en silence',
+    },
+    intercesion: {
+      tab: 'Intercéder pour Quelqu’un',
+      cap: '/assets/drop-caps/cap-S.png',
+      capAlt: 'S',
+      titleAfterCap: 'e tenir à la brèche pour ceux que vous aimez',
+      scriptureBadge: 'Galates 6:2 · Jacques 5:16 — « Portez les fardeaux les uns des autres »',
+      desc: 'Lorsqu’un proche traverse la maladie, le deuil ou l’incertitude et que les mots vous manquent, présentez son nom devant le Père. Le sanctuaire prépare une lettre pastorale remplie de tendresse et de promesses bibliques pour consoler son cœur.',
+      c1Title: 'Lettre pastorale personnalisée :',
+      c1Desc: 'Rédigée directement pour le cœur de la personne éprouvée, avec versets de consolation et prière de couverture.',
+      c2Title: 'Prête à partager sur WhatsApp ou Stories :',
+      c2Desc: 'Envoyez un rappel paisible qu’elle n’est pas seule et que quelqu’un intercède pour sa vie aujourd’hui.',
+    },
+    pacto: {
+      tab: 'Pacte de Paix',
+      cap: '/assets/drop-caps/cap-A.png',
+      capAlt: 'A',
+      titleAfterCap: 'ccord sacré de paix et de pardon',
+      scriptureBadge: 'Matthieu 5:9 · Matthieu 18:19 — « Heureux ceux qui procurent la paix »',
+      desc: 'Lorsque la fatigue ou une dispute dresse un mur dans le couple, la famille ou l’amitié, arrêtez les messages précipités. Partagez un seul téléphone, écoutez-vous sans interruption et laissez l’Écriture éclairer vos deux cœurs vers la réconciliation.',
+      f1Title: 'Écoute sans interruption :',
+      f1Desc: 'Chacun exprime son ressenti avec sincérité et respect avant de chercher à avoir raison.',
+      f2Title: 'Lumière biblique pour les deux cœurs :',
+      f2Desc: 'Des versets qui désarment l’orgueil (Éphésiens 4:26, Colossiens 3:13) et guident un accord mutuel de paix.',
+      f3Title: 'Prière d’unité :',
+      f3Desc: 'Une prière partagée pour guérir la blessure avant le coucher du soleil et avancer ensemble.',
+    },
   },
 };
 
@@ -178,9 +344,6 @@ const EXTRA_FREEDOM_FAQS: Record<'es' | 'en' | 'pt' | 'fr', FaqItem[]> = {
   ],
 };
 
-// Limpia cualquier numeración heredada ("1. ", "2. ", "3. ") en los textos de pestañas
-const stripLeadingNumber = (label: string) => label.replace(/^\d+\.\s*/, '');
-
 export default function App() {
   const [activeTab, setActiveTab] = useState<'alma' | 'libertad' | 'intercesion' | 'pacto'>('alma');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -191,7 +354,7 @@ export default function App() {
 
   const safeLocale = (locale === 'en' || locale === 'pt' || locale === 'fr') ? locale : 'es';
   const targetAppUrl = `https://godgotyou.app?lang=${safeLocale}`;
-  const freedomCopy = FREEDOM_LANDING_COPY[safeLocale];
+  const pillars = PILLARS_SPIRITUAL_COPY[safeLocale];
   const pathsHeader = PATHS_HEADER_COPY[safeLocale];
 
   const openLegal = (tab: 'privacy' | 'terms' | 'refunds') => {
@@ -358,7 +521,7 @@ export default function App() {
               <img 
                 src="/assets/drop-caps/cap-E.png" 
                 alt="E" 
-                className="float-left w-16 h-16 sm:w-20 sm:h-20 object-contain mr-4 mb-1 select-none pointer-events-none drop-shadow-xs" 
+                className="float-left w-16 h-16 sm:w-20 sm:h-20 object-contain mr-3.5 mb-1 select-none pointer-events-none drop-shadow-xs" 
               />
               {tKey('manifesto.textAfterDropCap')}
             </p>
@@ -376,7 +539,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 3. CAMINOS DE GRACIA Y LIBERTAD (SIN NUMERACIÓN NI ORDEN DE IMPORTANCIA) */}
+      {/* 3. CAMINOS DE GRACIA Y LIBERTAD (LIMPIO, SIN ETIQUETAS COMERCIALES NI NUMERACIÓN) */}
       <section id="pilares" className="py-16 sm:py-24 bg-white border-y border-[#EAE5DC] px-4 sm:px-6">
         <div className="max-w-5xl mx-auto space-y-12">
           
@@ -392,7 +555,7 @@ export default function App() {
             </p>
           </div>
 
-          {/* Selector de Pestañas sin números */}
+          {/* Selector de Pestañas limpio y sin jerarquía */}
           <div className="flex items-center justify-center">
             <div className="inline-flex p-1.5 rounded-2xl bg-[#FAF8F5] border border-[#EAE5DC] shadow-inner gap-1.5 flex-wrap justify-center">
               <button
@@ -404,29 +567,19 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                {stripLeadingNumber(tKey('paths.tab1'))}
+                {pillars.alma.tab}
               </button>
 
               <button
                 type="button"
                 onClick={() => setActiveTab('libertad')}
-                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold font-serif-display transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold font-serif-display transition-all cursor-pointer ${
                   activeTab === 'libertad'
                     ? 'bg-[#2D4523] text-white shadow-xs'
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                <Shield className="w-3.5 h-3.5 text-[#D4B373]" />
-                <span>{freedomCopy.tabLabel}</span>
-                <span
-                  className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${
-                    activeTab === 'libertad'
-                      ? 'bg-[#D4B373] text-[#0E1113]'
-                      : 'bg-[#5E7153]/15 text-[#2D4523]'
-                  }`}
-                >
-                  {freedomCopy.badgeNew}
-                </span>
+                {pillars.libertad.tab}
               </button>
 
               <button
@@ -438,69 +591,60 @@ export default function App() {
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                {stripLeadingNumber(tKey('paths.tab2'))}
+                {pillars.intercesion.tab}
               </button>
 
               <button
                 type="button"
                 onClick={() => setActiveTab('pacto')}
-                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold font-serif-display transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold font-serif-display transition-all cursor-pointer ${
                   activeTab === 'pacto'
                     ? 'bg-[#2D4523] text-white shadow-xs'
                     : 'text-[#4A5568] hover:text-[#1A1A1A]'
                 }`}
               >
-                <span>{stripLeadingNumber(tKey('paths.tab3'))}</span>
-                <span
-                  className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${
-                    activeTab === 'pacto'
-                      ? 'bg-[#D4B373] text-[#0E1113]'
-                      : 'bg-[#D4B373]/30 text-[#8C6D28]'
-                  }`}
-                >
-                  PRO
-                </span>
+                {pillars.pacto.tab}
               </button>
             </div>
           </div>
 
-          {/* Tarjetas interactivas con Letras Capitales de Procreate */}
+          {/* Tarjetas interactivas con Letras Capitales y Sustento Bíblico */}
           <div className="rounded-3xl p-6 sm:p-10 border border-[#E8E1D5] bg-[#FAF9F6] shadow-sm transition-all duration-300">
             
-            {/* 1. PARA MI ALMA */}
+            {/* 1. PARA MI ALMA (2 CORINTIOS 10:5) */}
             {activeTab === 'alma' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-start gap-3.5">
+                  <div className="flex items-center gap-2">
                     <img
-                      src="/assets/drop-caps/cap-L.png"
-                      alt="L"
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                      src={pillars.alma.cap}
+                      alt={pillars.alma.capAlt}
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs"
                     />
-                    <div className="pt-1">
-                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
-                        {tKey('paths.alma.title')}
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight -ml-1">
+                        {pillars.alma.titleAfterCap}
                       </h3>
-                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
-                        {tKey('paths.alma.subtitle')}
+                      <span className="text-xs text-[#5E7153] font-serif-bible italic font-semibold block mt-1 -ml-1">
+                        {pillars.alma.scriptureBadge}
                       </span>
                     </div>
                   </div>
                   <p className="text-sm text-[#4A5568] leading-relaxed">
-                    {tKey('paths.alma.desc')}
+                    {pillars.alma.desc}
                   </p>
                   <ul className="space-y-2.5 text-xs sm:text-sm text-[#2C3E50]">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{tKey('paths.alma.f1Title')}</strong> {tKey('paths.alma.f1Desc')}</span>
+                      <span><strong>{pillars.alma.f1Title}</strong> {pillars.alma.f1Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{tKey('paths.alma.f2Title')}</strong> {tKey('paths.alma.f2Desc')}</span>
+                      <span><strong>{pillars.alma.f2Title}</strong> {pillars.alma.f2Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{tKey('paths.alma.f3Title')}</strong> {tKey('paths.alma.f3Desc')}</span>
+                      <span><strong>{pillars.alma.f3Title}</strong> {pillars.alma.f3Desc}</span>
                     </li>
                   </ul>
                 </div>
@@ -525,40 +669,40 @@ export default function App() {
               </div>
             )}
 
-            {/* 2. PACTO DE LIBERTAD (CON LETRA CAPITAL P DE PROCREATE) */}
+            {/* 2. PACTO DE LIBERTAD (1 CORINTIOS 10:13 · PROVERBIOS 4:23) */}
             {activeTab === 'libertad' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-start gap-3.5">
+                  <div className="flex items-center gap-2">
                     <img
-                      src="/assets/drop-caps/cap-P.png"
-                      alt={freedomCopy.dropCapLetter}
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                      src={pillars.libertad.cap}
+                      alt={pillars.libertad.capAlt}
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs"
                     />
-                    <div className="pt-1">
-                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
-                        {freedomCopy.titleAfterCap}
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight -ml-1">
+                        {pillars.libertad.titleAfterCap}
                       </h3>
-                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
-                        {freedomCopy.subtitle}
+                      <span className="text-xs text-[#5E7153] font-serif-bible italic font-semibold block mt-1 -ml-1">
+                        {pillars.libertad.scriptureBadge}
                       </span>
                     </div>
                   </div>
                   <p className="text-sm text-[#4A5568] leading-relaxed">
-                    {freedomCopy.desc}
+                    {pillars.libertad.desc}
                   </p>
                   <ul className="space-y-2.5 text-xs sm:text-sm text-[#2C3E50]">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{freedomCopy.f1Title}</strong> {freedomCopy.f1Desc}</span>
+                      <span><strong>{pillars.libertad.f1Title}</strong> {pillars.libertad.f1Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{freedomCopy.f2Title}</strong> {freedomCopy.f2Desc}</span>
+                      <span><strong>{pillars.libertad.f2Title}</strong> {pillars.libertad.f2Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{freedomCopy.f3Title}</strong> {freedomCopy.f3Desc}</span>
+                      <span><strong>{pillars.libertad.f3Title}</strong> {pillars.libertad.f3Desc}</span>
                     </li>
                   </ul>
                 </div>
@@ -569,7 +713,7 @@ export default function App() {
                     <div className="flex items-center gap-2">
                       <Compass className="w-4 h-4 text-[#D4B373]" />
                       <span className="text-[10px] font-bold uppercase tracking-widest text-[#D4B373]">
-                        {freedomCopy.cardHeader}
+                        {pillars.libertad.cardHeader}
                       </span>
                     </div>
                     <Lock className="w-4 h-4 text-emerald-400" />
@@ -577,7 +721,7 @@ export default function App() {
 
                   <div className="space-y-1">
                     <span className="text-[11px] font-mono text-[#D4B373] block">
-                      {freedomCopy.cardAlias}
+                      {pillars.libertad.cardAlias}
                     </span>
                     <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
                       <div className="w-[93%] h-full bg-emerald-500 rounded-full" />
@@ -585,7 +729,7 @@ export default function App() {
                   </div>
 
                   <p className="font-serif-bible italic text-xs sm:text-sm text-[#E3DDD3] leading-relaxed bg-white/5 p-4 rounded-2xl border border-white/10">
-                    {freedomCopy.cardQuote}
+                    {pillars.libertad.cardQuote}
                   </p>
 
                   <a
@@ -595,43 +739,43 @@ export default function App() {
                     className="w-full py-3 px-4 rounded-xl bg-[#D4B373] text-[#0E1113] font-bold text-xs flex items-center justify-center gap-2 hover:opacity-95 transition"
                   >
                     <Users className="w-3.5 h-3.5" />
-                    <span>{freedomCopy.cardBtn}</span>
+                    <span>{pillars.libertad.cardBtn}</span>
                   </a>
                 </div>
               </div>
             )}
 
-            {/* 3. INTERCEDER POR ALGUIEN */}
+            {/* 3. INTERCEDER POR ALGUIEN (GÁLATAS 6:2 · SANTIAGO 5:16) */}
             {activeTab === 'intercesion' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-start gap-3.5">
+                  <div className="flex items-center gap-2">
                     <img
-                      src="/assets/drop-caps/cap-P.png"
-                      alt="P"
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                      src={pillars.intercesion.cap}
+                      alt={pillars.intercesion.capAlt}
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs"
                     />
-                    <div className="pt-1">
-                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
-                        {tKey('paths.intercession.title')}
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight -ml-1">
+                        {pillars.intercesion.titleAfterCap}
                       </h3>
-                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
-                        {tKey('paths.intercession.subtitle')}
+                      <span className="text-xs text-[#5E7153] font-serif-bible italic font-semibold block mt-1 -ml-1">
+                        {pillars.intercesion.scriptureBadge}
                       </span>
                     </div>
                   </div>
                   <p className="text-sm text-[#4A5568] leading-relaxed">
-                    {tKey('paths.intercession.desc')}
+                    {pillars.intercesion.desc}
                   </p>
                   <div className="space-y-3 pt-1">
                     <div className="p-3.5 rounded-2xl bg-white border border-[#E8E1D5] flex items-start gap-3">
                       <Send className="w-4 h-4 text-[#2D4523] shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-xs font-serif-display font-bold text-[#1A1A1A] block">
-                          {tKey('paths.intercession.c1Title')}
+                          {pillars.intercesion.c1Title}
                         </strong>
                         <p className="text-[11px] text-[#64748B] leading-relaxed">
-                          {tKey('paths.intercession.c1Desc')}
+                          {pillars.intercesion.c1Desc}
                         </p>
                       </div>
                     </div>
@@ -640,10 +784,10 @@ export default function App() {
                       <Share2 className="w-4 h-4 text-[#D4B373] shrink-0 mt-0.5" />
                       <div>
                         <strong className="text-xs font-serif-display font-bold text-[#1A1A1A] block">
-                          {tKey('paths.intercession.c2Title')}
+                          {pillars.intercesion.c2Title}
                         </strong>
                         <p className="text-[11px] text-[#64748B] leading-relaxed">
-                          {tKey('paths.intercession.c2Desc')}
+                          {pillars.intercesion.c2Desc}
                         </p>
                       </div>
                     </div>
@@ -670,45 +814,40 @@ export default function App() {
               </div>
             )}
 
-            {/* 4. PACTO DE PAZ (PRO) */}
+            {/* 4. PACTO DE PAZ (MATEO 5:9 · MATEO 18:19) */}
             {activeTab === 'pacto' && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center animate-in fade-in duration-300">
                 <div className="space-y-4 text-left">
-                  <div className="flex items-start gap-3.5">
+                  <div className="flex items-center gap-2">
                     <img
-                      src="/assets/drop-caps/cap-A.png"
-                      alt="A"
-                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs -mt-1"
+                      src={pillars.pacto.cap}
+                      alt={pillars.pacto.capAlt}
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-contain shrink-0 drop-shadow-xs"
                     />
-                    <div className="pt-1">
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight">
-                          {tKey('paths.covenant.title')}
-                        </h3>
-                        <span className="inline-flex items-center gap-1 text-[10px] font-sans font-bold bg-[#D4B373]/20 text-[#8C6D28] px-2 py-0.5 rounded-full uppercase tracking-wider">
-                          <Crown className="w-3 h-3 text-[#D4B373]" /> PRO
-                        </span>
-                      </div>
-                      <span className="text-xs text-[#5E7153] font-semibold block mt-1">
-                        {tKey('paths.covenant.subtitle')}
+                    <div>
+                      <h3 className="text-xl sm:text-2xl font-serif-display font-bold text-[#1A1A1A] leading-tight -ml-1">
+                        {pillars.pacto.titleAfterCap}
+                      </h3>
+                      <span className="text-xs text-[#5E7153] font-serif-bible italic font-semibold block mt-1 -ml-1">
+                        {pillars.pacto.scriptureBadge}
                       </span>
                     </div>
                   </div>
                   <p className="text-sm text-[#4A5568] leading-relaxed">
-                    {tKey('paths.covenant.desc')}
+                    {pillars.pacto.desc}
                   </p>
                   <ul className="space-y-2.5 text-xs sm:text-sm text-[#2C3E50]">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{tKey('paths.covenant.f1Title')}</strong> {tKey('paths.covenant.f1Desc')}</span>
+                      <span><strong>{pillars.pacto.f1Title}</strong> {pillars.pacto.f1Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{tKey('paths.covenant.f2Title')}</strong> {tKey('paths.covenant.f2Desc')}</span>
+                      <span><strong>{pillars.pacto.f2Title}</strong> {pillars.pacto.f2Desc}</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#5E7153] shrink-0 mt-0.5" />
-                      <span><strong>{tKey('paths.covenant.f3Title')}</strong> {tKey('paths.covenant.f3Desc')}</span>
+                      <span><strong>{pillars.pacto.f3Title}</strong> {pillars.pacto.f3Desc}</span>
                     </li>
                   </ul>
                 </div>
